@@ -1,5 +1,4 @@
 "use client"
-import React, { use, useState } from 'react'
 import style from '../page.module.css'
 import ContentStudio from './ContentStudio'
 import Progress from './progress/Progress'
