@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation'
 import style from './page.module.css'
 import RouteButton from './components/RouteButton';
+import Footer from './components/Footer';
 
 export default function Home() {
   const router = useRouter();
@@ -24,6 +25,8 @@ export default function Home() {
             }}/>
           </div>
         </div>
+
+        <Footer />
     </main>
   )
 }
