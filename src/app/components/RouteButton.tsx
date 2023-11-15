@@ -7,9 +7,9 @@ type Props = {
     action?: () => void
 }
 
-export default function PageFooter({icon, description, action}: Props) {
+export default function RouteButton({icon, description, action}: Props) {
   return (
-    <div className={style.page} onClick={action}>
+    <div className={style.routeButton} onClick={action}>
         <i className={icon}></i>
         <p>{description}</p>
     </div>

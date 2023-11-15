@@ -6,143 +6,57 @@
 /* ---------- header */
 .header {
   background-color: var(--green);
-  width: 100%;
   height: var(--big-height);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  color: var(--light);
-  padding: 15px;
-}
-/* contentStudio */
-.contentStudio {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 70px;
-  gap: 10px;
-}
-
-.contentStudio .imgDiv {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.imgDiv img {
+.imgContentStudio {
+  position: absolute;
+  bottom: -50%;
+}
+
+.imgContentStudio img {
   height: 100%;
 }
 
-/* progress */
-.progress {
+/* ---------- content */
+.content {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.step {
+.buttons {
+  display: flex;
+  margin-top: 200px;
+  gap: 55px;
+}
+
+.routeButton {
+  height: 100px;
+  width: 150px;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: var(--green);
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 5px;
-}
-
-.step .stepHeader {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--black);
-}
-
-.bar {
-  width: 100px;
-  height: 2px;
-  margin-top: 23px;
-}
-
-/* ---------- professionals */
-.professionals {
-  display: flex;
-  flex-direction: column;
-}
-
-.professional {
-  border-bottom: 1px solid #6d6565a4;
-  padding: 15px 25px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: .1s;
-}
-
-.professional:hover {
-  background-color: rgba(233, 233, 233, 0.646);
-}
-
-.professional:hover .icon {
-  margin-right: 0;
-}
-
-.icon i {
-  font-size: 20px;
-}
-
-.professional .icon {
-  margin-right: 40px;
-  transition: margin-right 0.3s ease;
-}
-
-.person {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.person .imgDiv {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ---------- footer */
-.footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  background-color: #D9D9D9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  gap: 30px;
-  border-top: 1px solid #6d6565a4;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2px;
+  text-align: center;
   cursor: pointer;
 }
 
-.page i {
-  font-size: 20px;
+.routeButton i {
+  font-size: 25px;
 }
 
-.page p {
-  font-size: 12px;
+.routeButton p {
+  color: #fff;
+  font-weight: lighter;
+  font-size: 14px;
 }
 
