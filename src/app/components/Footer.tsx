@@ -13,7 +13,7 @@ export default function Footer() {
         <p>INÍCIO</p>
       </div>
       <div className={style.itemFooter} onClick={() => {
-              router.push('/')
+              router.push('/professional')
             }}>
         <i className="fa-solid fa-calendar-days"></i>
         <p>AGENDAR</p>

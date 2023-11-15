@@ -18,7 +18,7 @@ export default function Home() {
         <div className={style.content}>
           <div className={style.buttons}>
             <RouteButton icon={'fa-solid fa-calendar-days'} description='Novo Agendamento' action={() => {
-              router.push('/')
+              router.push('/professional')
             }}/>
             <RouteButton icon={'fa-solid fa-file-pen'} description='Serviços' action={() => {
               router.push('/')
