@@ -86,7 +86,7 @@
   font-size: 17px;
 }
 
-/* ---------- */
+/* ---------- studio header */
 .studioHeader {
   display: flex;
   align-items: center;
@@ -154,3 +154,40 @@
   background-color: var(--progress);
 }
 
+/* ---------- professional */
+.professional {
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.professional:hover {
+  background-color: #f0f0f0;
+}
+
+.professionalDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.professional .imgProfessional {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgProfessional img {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
