@@ -22,6 +22,7 @@ export default function CardService(data: Props) {
             </div>
             <ConfirmButton message={data.service.title} />
             <p>{data.service.price}</p>
+            <p>tag teste</p>
         </div>
     </div>
   )
