@@ -21,7 +21,7 @@ export default function Home() {
               router.push('/professional')
             }}/>
             <RouteButton icon={'fa-solid fa-file-pen'} description='Serviços' action={() => {
-              router.push('/')
+              router.push('/service')
             }}/>
           </div>
         </div>

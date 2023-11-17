@@ -19,7 +19,7 @@ export default function Footer() {
         <p>AGENDAR</p>
       </div>
       <div className={style.itemFooter} onClick={() => {
-              router.push('/')
+              router.push('/service')
             }}>
       <i className="fa-solid fa-file-pen"></i>
         <p>SERVIÇOS</p>
