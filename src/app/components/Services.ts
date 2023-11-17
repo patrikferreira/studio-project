@@ -6,13 +6,13 @@ type Service = {
 }
 
 const serviceData: Service[] = [
-    {title: 'Corte com lavagem e finalização', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', price: 'R$ 60,00'},
-    {title: 'Corte com hidratação', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', price: 'R$ 90,00'},
-    {title: 'Tratamento capilar', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', price: 'R$ 50,00'},
-    {title: 'Botox', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', price: 'R$ 70,00'},
-    {title: 'Orgânica', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', price: 'R$ 120,00'},
-    {title: 'Higienização capilar', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', price: 'R$ 40,00'},
-    {title: 'Franja', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', price: 'R$ 15,00'}
+    {title: 'Corte com lavagem e finalização', description: '', price: 'R$ 60,00'},
+    {title: 'Corte com hidratação', description: 'Inclui finalização com escova ou cabelos com curvaturas', price: 'R$ 90,00'},
+    {title: 'Tratamento capilar', description: 'Quaisquer tipos de cabelos com curvaturas ou não.', price: 'R$ 50,00'},
+    {title: 'Botox', description: 'O valor pode variar de acordo com o comprimento e quantidade do cabelo.', price: 'R$ 70,00'},
+    {title: 'Orgânica', description: 'O valor pode variar de acordo com o comprimento e quantidade do cabelo.', price: 'R$ 120,00'},
+    {title: 'Higienização capilar', description: 'Inclui finalização com escova/cabelos com curvaturas', price: 'R$ 40,00'},
+    {title: 'Franja', description: 'Já vir com o cabelo seco e levado', price: 'R$ 15,00'}
 ]
 
 export default serviceData;

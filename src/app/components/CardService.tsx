@@ -1,6 +1,7 @@
 import React from 'react'
 import style from '../page.module.css'
 import ConfirmButton from './ConfirmButton'
+import Checkbox from './Checkbox'
 
 type Service = {
     title: string,
@@ -17,12 +18,13 @@ export default function CardService(data: Props) {
     <div className={style.serviceContent}>
         <div className={style.serviceItem}>
             <div className={style.serviceTitle}>
+            <Checkbox/>
+            <div>
                 <h3>{data.service.title}</h3>
-                <p>{data.service.description}</p>
+                <p className={style.serviceDescription}>{data.service.description}</p>
             </div>
-            <ConfirmButton message={data.service.title} />
+            </div>
             <p>{data.service.price}</p>
-            <p>tag teste</p>
         </div>
     </div>
   )

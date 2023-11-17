@@ -3,6 +3,8 @@ import { useRouter } from 'next/navigation'
 import style from './page.module.css'
 import RouteButton from './components/RouteButton';
 import Footer from './components/Footer';
+import Image from 'next/image'
+import perfil from '../../public/Assets/ficticia-perfil.png'
 
 export default function Home() {
   const router = useRouter();
@@ -11,7 +13,10 @@ export default function Home() {
     <main className={style.main}>
         <header className={style.header}>
           <div className={style.imgContentStudio}>
-            <img src="assets/ficticia-perfil.png" alt="" />
+            <Image
+              src={perfil}
+              alt="foto de perfil do profissional"
+            />
           </div>
         </header>
 
@@ -25,8 +30,8 @@ export default function Home() {
             }}/>
           </div>
         </div>
-
         <Footer />
+
     </main>
   )
 }
