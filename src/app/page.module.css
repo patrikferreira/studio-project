@@ -154,6 +154,9 @@
   background-color: var(--progress);
 }
 
+.colorIcon {
+  color: #29084b;
+}
 /* ---------- professional */
 .professional {
   border-bottom: 1px solid var(--border-color);

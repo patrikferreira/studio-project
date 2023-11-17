@@ -10,7 +10,7 @@ type Props = {
 export default function RouteButton({icon, description, action}: Props) {
   return (
     <div className={style.routeButton} onClick={action}>
-        <i className={icon}></i>
+        <i className={`${icon} ${style.colorIcon}`}></i>
         <p>{description}</p>
     </div>
   )
