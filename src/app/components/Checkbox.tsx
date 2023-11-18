@@ -1,7 +1,11 @@
 import style from '../page.module.css'
 
-export default function Checkbox() {
+type Props = {
+    checked?: boolean;
+}
+
+export default function Checkbox({checked}: Props) {
     return (
-        <input className={style.inutCheckbox} type="checkbox"/>
+        <input className={style.inutCheckbox} type="checkbox" checked={checked}/>
     )
 }

@@ -22,6 +22,12 @@ export default function page() {
           ))}
         </div>
 
+        <div className={style.buttonWhatsappDiv}>
+            <button className={style.buttonWhatsapp}>
+              
+            </button>
+        </div>
+
         
 
         <Footer />

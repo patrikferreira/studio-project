@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import style from '../page.module.css'
 import ConfirmButton from './ConfirmButton'
 import Checkbox from './Checkbox'
@@ -14,11 +15,16 @@ type Props = {
 }
 
 export default function CardService(data: Props) {
+    const [isChecked, setIsChecked] = useState(false);
+
+    function handleServiceItemClick() {
+        setIsChecked(!isChecked);
+    }
   return (
     <div className={style.serviceContent}>
-        <div className={style.serviceItem}>
+        <div className={style.serviceItem} onClick={handleServiceItemClick}>
             <div className={style.serviceTitle}>
-            <Checkbox/>
+            <Checkbox checked={isChecked}/>
             <div>
                 <h3>{data.service.title}</h3>
                 <p className={style.serviceDescription}>{data.service.description}</p>
