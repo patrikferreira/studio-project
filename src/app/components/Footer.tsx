@@ -1,6 +1,7 @@
+"use client"
 import { useRouter } from 'next/navigation'
 import React from 'react'
-import style from '../page.module.css'
+import style from '../(aplication)/page.module.css'
 
 export default function Footer() {
     const router = useRouter();

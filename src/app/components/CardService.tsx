@@ -1,8 +1,9 @@
 "use client"
-import React, { useState } from 'react'
-import style from '../page.module.css'
+import React, { useContext, useState } from 'react'
+import style from '../(aplication)/page.module.css'
 import ConfirmButton from './ConfirmButton'
 import Checkbox from './Checkbox'
+import { dataContext } from '../store/DataContext'
 
 type Service = {
     title: string,
@@ -15,11 +16,18 @@ type Props = {
 }
 
 export default function CardService(data: Props) {
+    const [selectedServices, setSelectedServices] = useState<Service[]>([]);
+    const ctx = useContext(dataContext);
     const [isChecked, setIsChecked] = useState(false);
+
+    function handleServiceSelection(service: Service) {
+        
+    }
 
     function handleServiceItemClick() {
         setIsChecked(!isChecked);
     }
+
   return (
     <div className={style.serviceContent}>
         <div className={style.serviceItem} onClick={handleServiceItemClick}>

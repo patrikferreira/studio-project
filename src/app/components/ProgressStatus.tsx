@@ -1,11 +1,14 @@
-import React from 'react';
-import style from '../page.module.css';
+import React, { useContext } from 'react';
+import style from '../(aplication)/page.module.css'
+import { dataContext } from '../store/DataContext';
 
 type Props = {
     currentPage: string,
 }
 
 export default function ProgressStatus({ currentPage }: Props) {
+
+  const ctx = useContext(dataContext)
   return (
     <div className={style.progressStatus}>
       <div className={style.divStatusProfessional}>

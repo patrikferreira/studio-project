@@ -203,7 +203,6 @@
 }
 
 /* ------------ services */
-
 .serviceItem {
   display: flex;
   align-items: center;
@@ -235,4 +234,24 @@
 .inutCheckbox {
   width: 17px;
   height: 17px;
+}
+
+.buttonWhatsappDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+}
+
+.buttonWhatsappDiv button {
+  background-color: var(--primary);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: var(--light);
+  font-size: 15px;
+
 }

@@ -1,5 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import DataProvider from './store/DataContext'
+import Footer from './components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +20,7 @@ export default function RootLayout({
       <head>
         <script src="https://kit.fontawesome.com/5621bbdc8a.js" crossOrigin="anonymous"></script>
       </head>
-      <body className={inter.className} suppressHydrationWarning={true}>
+      <body className={inter.className}>
         {children}
       </body>
     </html>

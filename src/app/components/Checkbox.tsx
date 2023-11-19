@@ -1,4 +1,4 @@
-import style from '../page.module.css'
+import style from '../(aplication)/page.module.css'
 
 type Props = {
     checked?: boolean;

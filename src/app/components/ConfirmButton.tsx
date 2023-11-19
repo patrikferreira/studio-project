@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../page.module.css'
+import style from '../(aplication)/page.module.css'
 import { Butcherman } from 'next/font/google'
 
 type Props = {
@@ -11,7 +11,7 @@ export default function ConfirmButton({message}: Props) {
         <button onClick={() => {
             window.open(`https://whatsa.me/5585998473291/?t=${message}`)
         }}>
-            whatsapp
+            CONFIRMAR <i className="fa-brands fa-whatsapp"></i>
         </button>
     )
 }
