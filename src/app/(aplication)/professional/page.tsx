@@ -1,7 +1,6 @@
 "use client"
 import React, { useContext } from 'react'
 import style from '../page.module.css'
-import Footer from '../../components/Footer'
 import { useRouter } from 'next/navigation'
 import StudioHeader from '../../components/StudioHeader'
 import ProgressStatus from '../../components/ProgressStatus'

@@ -2,26 +2,22 @@ import React, { useContext } from 'react';
 import style from '../(aplication)/page.module.css'
 import { dataContext } from '../store/DataContext';
 
-type Props = {
-    currentPage: string,
-}
-
-export default function ProgressStatus({ currentPage }: Props) {
+export default function ProgressStatus() {
 
   const ctx = useContext(dataContext)
   return (
     <div className={style.progressStatus}>
       <div className={style.divStatusProfessional}>
-        <div className={`${style.divColor} ${currentPage === 'professional' ? style.orangeColor : ''}`}>
+        <div className={style.divColor} style={{background: '#F87C09'}}>
           1
         </div>
         <p>Selecione um Profissional</p>
       </div>
 
-      <span className={`${style.bar} ${currentPage === 'service' ? style.orangeColor : ''}`}></span>
+      <span className={`${style.bar} ${ctx.selectedProfessional ? style.orangeColor : ''}`}></span>
 
       <div className={style.divStatusService}>
-        <div className={`${style.divColor} ${currentPage === 'service' ? style.orangeColor : ''}`}>
+        <div className={`${style.divColor} ${ctx.selectedProfessional ? style.orangeColor : ''}`}>
           2
         </div>
         <p>Selecione um Serviço</p>

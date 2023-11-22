@@ -12,20 +12,17 @@ type Service = {
 }
 
 type Props = {
-    service: Service
+    service: Service,
+    selected: (selected: string) => void
 }
 
-export default function CardService(data: Props) {
-    const [selectedServices, setSelectedServices] = useState<Service[]>([]);
+export default function CardService({service, selected}: Props) {
     const ctx = useContext(dataContext);
     const [isChecked, setIsChecked] = useState(false);
 
-    function handleServiceSelection(service: Service) {
-        
-    }
-
     function handleServiceItemClick() {
         setIsChecked(!isChecked);
+        selected(service.title);   
     }
 
   return (
@@ -34,11 +31,11 @@ export default function CardService(data: Props) {
             <div className={style.serviceTitle}>
             <Checkbox checked={isChecked}/>
             <div>
-                <h3>{data.service.title}</h3>
-                <p className={style.serviceDescription}>{data.service.description}</p>
+                <h3>{service.title}</h3>
+                <p className={style.serviceDescription}>{service.description}</p>
             </div>
             </div>
-            <p>{data.service.price}</p>
+            <p>{service.price}</p>
         </div>
     </div>
   )
