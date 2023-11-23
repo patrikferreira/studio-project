@@ -14,15 +14,10 @@ export default function page() {
   const ctx = useContext(dataContext);
   const router = useRouter();
 
-  // useEffect(() => {
-  //   if(ctx.selectedProfessional == null) {
-  //     router.push('/professional');
-  //   }
-  // }, [])
 
   function generateMessage() {
     const formatedMessage = selectedService.length > 1 ? 'os seguintes serviços' : 'o serviço'
-    if(ctx.selectedProfessional && selectedService.length > 0) {
+    if (ctx.selectedProfessional && selectedService.length > 0) {
       setMessage(`Olá! Gostaria de agendar ${formatedMessage}: ${selectedService}, com o(a) ${ctx.selectedProfessional.name}. Estou interessado(a) em marcar uma data. Como podemos prosseguir?`)
     }
   }
@@ -31,23 +26,27 @@ export default function page() {
     window.open(`https://whatsa.me/5585998473291/?t=${message}`)
   }
 
+  function redirectRout() {
+    router.push('/professional');
+  }
+
 
   function selectedServiceA(service: string) {
-    if(!selectedService.includes(service)) {
+    if (!selectedService.includes(service)) {
       setSelectedService(prevSelectedServices => [...prevSelectedServices, service])
-    } 
-    if(selectedService.includes(service)) {
+    }
+    if (selectedService.includes(service)) {
       let newArray = [...selectedService]
       let indexItem = newArray.indexOf(service);
-      if(indexItem !== -1)
-      newArray.splice(indexItem, 1)
+      if (indexItem !== -1)
+        newArray.splice(indexItem, 1)
       setSelectedService(newArray)
-      
+
     }
   }
 
 
-  
+
   useEffect(() => {
     generateMessage()
   }, [selectedService])
@@ -55,35 +54,35 @@ export default function page() {
   return (
     <div className={style.service}>
       <header className={style.header}>
-          <StudioHeader />
-          <ProgressStatus />
-        </header>
+        <StudioHeader />
+        <ProgressStatus />
+      </header>
 
-        <div className={style.serviceContent}>
-          {ctx.selectedProfessional &&
-           ctx.selectedProfessional.services.map((s) => {
-      
-            return <CardService service={s} key={s.title} selected={selectedServiceA}/>
-          })}
-
-          {!ctx.selectedProfessional &&
-            ctx.services.map((s) => {
-      
-            return <CardService service={s} key={s.title} selected={selectedServiceA}/>
-          })}
-        </div>
-
+      <div className={style.serviceContent}>
         {ctx.selectedProfessional &&
-          <div className={style.buttonWhatsappDiv}>
-            <ConfirmButton message={message} action={sendMessage} title='Confirmar' icon='fa-brands fa-whatsapp'/>
-          </div>
-        }
+          ctx.selectedProfessional.services.map((s) => {
+
+            return <CardService service={s} key={s.title} selected={selectedServiceA} />
+          })}
 
         {!ctx.selectedProfessional &&
-          <div className={style.buttonWhatsappDiv}>
-            <ConfirmButton message={message} action={sendMessage} title='Selecione o profissional' icon=''/>
-          </div>
-        }
+          ctx.services.map((s) => {
+
+            return <CardService service={s} key={s.title} selected={selectedServiceA} />
+          })}
+      </div>
+
+      {ctx.selectedProfessional &&
+        <div className={style.buttonWhatsappDiv}>
+          <ConfirmButton action={sendMessage} title='Confirmar' icon='fa-brands fa-whatsapp' />
+        </div>
+      }
+
+      {!ctx.selectedProfessional &&
+        <div className={style.buttonWhatsappDiv}>
+          <ConfirmButton action={redirectRout} title='Profissionais' icon='' />
+        </div>
+      }
     </div>
-  ) 
+  )
 }
