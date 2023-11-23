@@ -26,7 +26,7 @@ export default function page() {
     window.open(`https://whatsa.me/5585998473291/?t=${message}`)
   }
 
-  function redirectRout() {
+  function redirectRoute() {
     router.push('/professional');
   }
 
@@ -80,7 +80,7 @@ export default function page() {
 
       {!ctx.selectedProfessional &&
         <div className={style.buttonWhatsappDiv}>
-          <ConfirmButton action={redirectRout} title='Profissionais' icon='' />
+          <ConfirmButton action={redirectRoute} title='Profissionais' icon='' />
         </div>
       }
     </div>
