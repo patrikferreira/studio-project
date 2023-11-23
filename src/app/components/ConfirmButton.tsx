@@ -4,14 +4,15 @@ import { Butcherman } from 'next/font/google'
 
 type Props = {
     message: string,
+    action: () => void,
+    title: string,
+    icon: string
 }
 
-export default function ConfirmButton({message}: Props) {
+export default function ConfirmButton({message, action, title, icon}: Props) {
     return (
-        <button onClick={() => {
-            window.open(`https://whatsa.me/5585998473291/?t=${message}`)
-        }}>
-            CONFIRMAR <i className="fa-brands fa-whatsapp"></i>
+        <button onClick={action}>
+            {title} <i className={icon}></i>
         </button>
     )
 }

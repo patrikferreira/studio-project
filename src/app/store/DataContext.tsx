@@ -11,7 +11,9 @@ export type Professional = {
 export type contextProvider = {
     professionals: Professional[],
     selectedProfessional: Professional | null,
-    setProfessional: (professional: Professional | null) => void
+    setProfessional: (professional: Professional | null) => void,
+    services: Service[],
+    professionalDataAux: Professional[]
 }
 
 type Props = {
@@ -23,6 +25,8 @@ type Service = {
     description: string,
     price: string
 }
+
+
 
 const professionalData: Professional[] = [
     {
@@ -52,13 +56,17 @@ const professionalData: Professional[] = [
    
 ]
 
+const concatArray = professionalData[0].services.concat(professionalData[1].services)
+
 
 
 export const dataContext = createContext<contextProvider>({} as contextProvider)
 
 export default function DataProvider({children}: Props) {
     const [selectedProfessional, setSelectedProfessional] = useState<Professional | null>(null);
-    return <dataContext.Provider value={{professionals: professionalData, setProfessional: setSelectedProfessional, selectedProfessional: selectedProfessional}}>
+    const [services, setServices] = useState<Service[]>(concatArray);
+    const [professionalDataAux, setProfessionalDataAux] = useState<Professional[]>(professionalData)
+    return <dataContext.Provider value={{professionals: professionalData, setProfessional: setSelectedProfessional, selectedProfessional: selectedProfessional, services: services, professionalDataAux: professionalDataAux}}>
         {children}
     </dataContext.Provider>
 }

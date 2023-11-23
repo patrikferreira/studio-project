@@ -242,16 +242,26 @@
   align-items: center;
   position: absolute;
   width: 100%;
-  bottom: 100px;
+  bottom: 70px;
 }
 
 .buttonWhatsappDiv button {
   background-color: var(--primary);
   border: none;
-  padding: 10px 15px;
+  padding: 10px 25px;
   cursor: pointer;
   border-radius: 3px;
   color: var(--light);
   font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
+}
+
+/* ---------- responsive */
+@media (max-width: 960px) {
+  .header {
+    height: var(--height);
+  }
 }

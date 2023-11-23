@@ -8,33 +8,49 @@ import ConfirmButton from '../../components/ConfirmButton'
 import { dataContext } from '../../store/DataContext'
 import { useRouter } from 'next/navigation'
 
-type Service = {
-  title: string,
-  description: string,
-  price: string
-}
-
 export default function page() {
   const [message, setMessage] = useState('');
   const [selectedService, setSelectedService] = useState<string[]>([]);
   const ctx = useContext(dataContext);
   const router = useRouter();
 
-  useEffect(() => {
-    if(ctx.selectedProfessional == null) {
-      router.push('/professional');
-    }
-  }, [])
+  // useEffect(() => {
+  //   if(ctx.selectedProfessional == null) {
+  //     router.push('/professional');
+  //   }
+  // }, [])
 
-  useEffect(() => {
+  function generateMessage() {
+    const formatedMessage = selectedService.length > 1 ? 'os seguintes serviços' : 'o serviço'
     if(ctx.selectedProfessional && selectedService.length > 0) {
-      setMessage(`Gostaria de agendar os serviços ${selectedService} com o(a) ${ctx.selectedProfessional.name}`)
+      setMessage(`Olá! Gostaria de agendar ${formatedMessage}: ${selectedService}, com o(a) ${ctx.selectedProfessional.name}. Estou interessado(a) em marcar uma data. Como podemos prosseguir?`)
     }
-  }, [ctx.selectedProfessional, selectedService])
+  }
+
+  function sendMessage() {
+    window.open(`https://whatsa.me/5585998473291/?t=${message}`)
+  }
+
 
   function selectedServiceA(service: string) {
-    setSelectedService(prevSelectedServices => [...prevSelectedServices, service])
+    if(!selectedService.includes(service)) {
+      setSelectedService(prevSelectedServices => [...prevSelectedServices, service])
+    } 
+    if(selectedService.includes(service)) {
+      let newArray = [...selectedService]
+      let indexItem = newArray.indexOf(service);
+      if(indexItem !== -1)
+      newArray.splice(indexItem, 1)
+      setSelectedService(newArray)
+      
+    }
   }
+
+
+  
+  useEffect(() => {
+    generateMessage()
+  }, [selectedService])
 
   return (
     <div className={style.service}>
@@ -44,18 +60,30 @@ export default function page() {
         </header>
 
         <div className={style.serviceContent}>
-          {ctx.selectedProfessional?.services.map((s) => {
+          {ctx.selectedProfessional &&
+           ctx.selectedProfessional.services.map((s) => {
+      
+            return <CardService service={s} key={s.title} selected={selectedServiceA}/>
+          })}
+
+          {!ctx.selectedProfessional &&
+            ctx.services.map((s) => {
       
             return <CardService service={s} key={s.title} selected={selectedServiceA}/>
           })}
         </div>
 
-        <div className={style.buttonWhatsappDiv}>
-            <ConfirmButton message={message}/>
-  
-        </div>
+        {ctx.selectedProfessional &&
+          <div className={style.buttonWhatsappDiv}>
+            <ConfirmButton message={message} action={sendMessage} title='Confirmar' icon='fa-brands fa-whatsapp'/>
+          </div>
+        }
 
-      
+        {!ctx.selectedProfessional &&
+          <div className={style.buttonWhatsappDiv}>
+            <ConfirmButton message={message} action={sendMessage} title='Selecione o profissional' icon=''/>
+          </div>
+        }
     </div>
   ) 
 }
