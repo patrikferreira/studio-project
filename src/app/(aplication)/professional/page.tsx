@@ -6,7 +6,6 @@ import StudioHeader from '../../components/StudioHeader'
 import ProgressStatus from '../../components/ProgressStatus'
 import Professional from '../../components/Professional'
 import { dataContext } from '../../store/DataContext'
-import Footer from '@/app/components/Footer'
 
 export default function page() {
     const router = useRouter();
@@ -24,8 +23,6 @@ export default function page() {
             return <Professional professional={p} key={p.id}/>
           })}
         </div>
-
-        {/* <Footer /> */}
     </div>
   )
 }

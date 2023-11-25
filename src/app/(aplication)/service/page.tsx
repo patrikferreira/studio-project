@@ -7,7 +7,6 @@ import CardService from '../../components/CardService'
 import ConfirmButton from '../../components/ConfirmButton'
 import { dataContext } from '../../store/DataContext'
 import { useRouter } from 'next/navigation'
-import Footer from '@/app/components/Footer'
 
 export default function page() {
   const [message, setMessage] = useState('');
