@@ -9,7 +9,7 @@ export default function RootLayout({
   return <>
     <DataProvider>
         {children}
-    <Footer />
+      <Footer />
     </DataProvider>
   </>
 }

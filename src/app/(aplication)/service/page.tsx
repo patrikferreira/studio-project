@@ -7,6 +7,7 @@ import CardService from '../../components/CardService'
 import ConfirmButton from '../../components/ConfirmButton'
 import { dataContext } from '../../store/DataContext'
 import { useRouter } from 'next/navigation'
+import Footer from '@/app/components/Footer'
 
 export default function page() {
   const [message, setMessage] = useState('');
@@ -59,28 +60,29 @@ export default function page() {
         <ProgressStatus />
       </header>
 
-      <div className={style.serviceContent}>
+      <div>
+        <div className={style.serviceContent}>
+          {ctx.selectedProfessional &&
+            ctx.selectedProfessional.services.map((s) => {
+              return <CardService service={s} key={s.title} selected={selectedServiceA} />
+            })}
+          {!ctx.selectedProfessional &&
+            ctx.services.map((s) => {
+              return <CardService service={s} key={s.title} selected={selectedServiceA} />
+            })}
+        </div>
         {ctx.selectedProfessional &&
-          ctx.selectedProfessional.services.map((s) => {
-            return <CardService service={s} key={s.title} selected={selectedServiceA} />
-          })}
+          <div className={`${style.buttonWhatsappDiv}`}>
+            <ConfirmButton disabled={!buttonDisabled()} action={sendMessage} title='Confirmar' icon='fa-brands fa-whatsapp' />
+          </div>
+        }
         {!ctx.selectedProfessional &&
-          ctx.services.map((s) => {
-            return <CardService service={s} key={s.title} selected={selectedServiceA} />
-          })}
+          <div
+            className={style.buttonWhatsappDiv}>
+            <ConfirmButton disabled={false} action={redirectRoute} title='Profissionais' icon='' />
+          </div>
+        }
       </div>
-
-      {ctx.selectedProfessional &&
-        <div className={`${style.buttonWhatsappDiv}`}>
-          <ConfirmButton disabled={!buttonDisabled()} action={sendMessage} title='Confirmar' icon='fa-brands fa-whatsapp' />
-        </div>
-      }
-      {!ctx.selectedProfessional &&
-        <div
-          className={style.buttonWhatsappDiv}>
-          <ConfirmButton disabled={false} action={redirectRoute} title='Profissionais' icon='' />
-        </div>
-      }
     </div >
   )
 } 
