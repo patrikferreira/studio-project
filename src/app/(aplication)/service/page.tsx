@@ -22,6 +22,10 @@ export default function page() {
     }
   }
 
+  function buttonDisabled() {
+    return !!selectedService.length
+  }
+
   function sendMessage() {
     window.open(`https://whatsa.me/5585998473291/?t=${message}`)
   }
@@ -67,15 +71,16 @@ export default function page() {
       </div>
 
       {ctx.selectedProfessional &&
-        <div className={style.buttonWhatsappDiv}>
-          <ConfirmButton action={sendMessage} title='Confirmar' icon='fa-brands fa-whatsapp' />
+        <div className={`${style.buttonWhatsappDiv}`}>
+          <ConfirmButton disabled={!buttonDisabled()} action={sendMessage} title='Confirmar' icon='fa-brands fa-whatsapp' />
         </div>
       }
       {!ctx.selectedProfessional &&
-        <div className={style.buttonWhatsappDiv}>
-          <ConfirmButton action={redirectRoute} title='Profissionais' icon='' />
+        <div
+          className={style.buttonWhatsappDiv}>
+          <ConfirmButton disabled={false} action={redirectRoute} title='Profissionais' icon='' />
         </div>
       }
-    </div>
+    </div >
   )
-}
+} 

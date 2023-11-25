@@ -35,10 +35,6 @@ export default function CardService({ service, selected }: Props) {
         return '';
     }
 
-    console.log(searchProfessional(service))
-
-    console.log(searchProfessional(service))
-
     return (
         <div className={style.serviceItem} onClick={handleServiceItemClick}>
             <div className={style.serviceTitle}>
