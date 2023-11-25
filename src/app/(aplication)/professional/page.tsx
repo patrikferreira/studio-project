@@ -23,7 +23,6 @@ export default function page() {
             return <Professional professional={p} key={p.id}/>
           })}
         </div>
-
     </div>
   )
 }

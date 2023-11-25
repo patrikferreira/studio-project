@@ -1,6 +1,6 @@
 .main {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 85px);
 }
 
 /* ---------- header */
@@ -68,12 +68,12 @@
 
 /* ---------- */
 .footer {
-  position: absolute;
   width: 100%;
-  bottom: 0;
   background-color: var(--bg-footer);
   padding: 7px;
   display: flex;
+  align-items: center;
+  height: 60px;
   gap: 55px;
   margin-top: 1.5rem ;
   justify-content: center;
@@ -203,6 +203,11 @@
 }
 
 /* ------------ services */
+.service {
+  height: calc(100vh - 85px);
+  display: grid;
+  grid-template-rows: 30% 70%;
+}
 .serviceItem {
   display: flex;
   align-items: center;
@@ -237,7 +242,7 @@
 .serviceContent {
   margin-bottom: 2rem;
   height: max-content;
-  max-height: 600px;
+  max-height: 85%;
   overflow: auto;
   overflow-x: hidden;
 }
