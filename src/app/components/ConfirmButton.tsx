@@ -6,11 +6,16 @@ type Props = {
     action: () => void,
     title: string,
     icon: string
+    disabled: boolean
 }
 
-export default function ConfirmButton({ action, title, icon}: Props) {
+function styleDisabledButton(disabled: boolean) {
+    return disabled ? style.buttonDisabled : ''
+  }
+
+export default function ConfirmButton({ action, title, icon, disabled, }: Props) {
     return (
-        <button onClick={action}>
+        <button disabled={disabled} onClick={action} className={styleDisabledButton(disabled)}>
             {title} <i className={icon}></i>
         </button>
     )

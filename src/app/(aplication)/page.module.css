@@ -232,7 +232,6 @@
 .serviceDescription {
   font-size: 12px;
   color: rgb(34, 33, 33);
-  height: 20px;
 }
 
 .serviceContent {
@@ -287,6 +286,10 @@
   align-items: center;
   gap: 10px;
 
+}
+
+.buttonDisabled {
+  background-color: var(--secondary) !important;
 }
 
 /* ---------- responsive */
