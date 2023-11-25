@@ -229,6 +229,31 @@
   height: 20px;
 }
 
+.serviceContent {
+  margin-bottom: 2rem;
+  height: max-content;
+  max-height: 600px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.serviceContent::-webkit-scrollbar {
+  width: 11px;
+  background-color: black;
+}
+
+.serviceContent::-webkit-scrollbar-track {
+  background-color: rgb(175, 175, 175);
+}
+
+.serviceContent::-webkit-scrollbar-thumb{
+  background: #888;
+  border-radius: 15px; 
+}
+
+
+
+
 
 /* Checkbox */
 .inutCheckbox {
@@ -240,7 +265,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 100%;
   bottom: 70px;
 }

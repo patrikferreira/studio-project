@@ -44,9 +44,6 @@ export default function page() {
 
     }
   }
-
-
-
   useEffect(() => {
     generateMessage()
   }, [selectedService])
@@ -61,13 +58,10 @@ export default function page() {
       <div className={style.serviceContent}>
         {ctx.selectedProfessional &&
           ctx.selectedProfessional.services.map((s) => {
-
             return <CardService service={s} key={s.title} selected={selectedServiceA} />
           })}
-
         {!ctx.selectedProfessional &&
           ctx.services.map((s) => {
-
             return <CardService service={s} key={s.title} selected={selectedServiceA} />
           })}
       </div>
@@ -77,7 +71,6 @@ export default function page() {
           <ConfirmButton action={sendMessage} title='Confirmar' icon='fa-brands fa-whatsapp' />
         </div>
       }
-
       {!ctx.selectedProfessional &&
         <div className={style.buttonWhatsappDiv}>
           <ConfirmButton action={redirectRoute} title='Profissionais' icon='' />

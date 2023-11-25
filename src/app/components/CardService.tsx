@@ -16,14 +16,14 @@ type Props = {
     selected: (selected: string) => void
 }
 
-export default function CardService({service, selected}: Props) {
+export default function CardService({ service, selected }: Props) {
     const ctx = useContext(dataContext);
     const [isChecked, setIsChecked] = useState(false);
 
     function handleServiceItemClick() {
-        if(ctx.selectedProfessional) {
+        if (ctx.selectedProfessional) {
             setIsChecked(!isChecked);
-            selected(service.title);   
+            selected(service.title);
         }
     }
 
@@ -31,26 +31,19 @@ export default function CardService({service, selected}: Props) {
         // service
     }
 
-    useEffect(() => {
-        console.log(ctx.professionalDataAux)
-    },[])
-
-
-  return (
-    <div className={style.serviceContent}>
+    return (
         <div className={style.serviceItem} onClick={handleServiceItemClick}>
             <div className={style.serviceTitle}>
-            {ctx.selectedProfessional &&
-                <Checkbox checked={isChecked}/>
-            }
-            <div>
-                <h3>{service.title}</h3>
-                <p className={style.serviceDescription}>{service.description}</p>
-                <p>{}</p>
-            </div>
+                {ctx.selectedProfessional &&
+                    <Checkbox checked={isChecked} />
+                }
+                <div>
+                    <h3>{service.title}</h3>
+                    <p className={style.serviceDescription}>{service.description}</p>
+                    <p>{ }</p>
+                </div>
             </div>
             <p>{service.price}</p>
         </div>
-    </div>
-  )
+    )
 }
