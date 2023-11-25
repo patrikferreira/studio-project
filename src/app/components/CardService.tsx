@@ -28,8 +28,16 @@ export default function CardService({ service, selected }: Props) {
     }
 
     function searchProfessional(service: Service) {
-        // service
+        if(ctx.professionals && !ctx.selectedProfessional) {
+            const prof = ctx.professionals.find((prof) => prof.services.includes(service));
+            return `Profissional: ${prof?.name}`;
+        }
+        return '';
     }
+
+    console.log(searchProfessional(service))
+
+    console.log(searchProfessional(service))
 
     return (
         <div className={style.serviceItem} onClick={handleServiceItemClick}>
@@ -37,13 +45,13 @@ export default function CardService({ service, selected }: Props) {
                 {ctx.selectedProfessional &&
                     <Checkbox checked={isChecked} />
                 }
-                <div>
+                <div className={style.serviceInfo}>
                     <h3>{service.title}</h3>
                     <p className={style.serviceDescription}>{service.description}</p>
-                    <p>{ }</p>
+                    <p>{searchProfessional(service)}</p>
                 </div>
             </div>
             <p>{service.price}</p>
         </div>
-    )
-}
+  
+)}

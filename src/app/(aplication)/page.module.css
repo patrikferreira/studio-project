@@ -208,9 +208,15 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-color);
-  padding: 10px 15px;
+  padding: 5px 15px;
   cursor: pointer;
   transition: .3s;
+}
+
+.serviceInfo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .serviceItem:hover {
