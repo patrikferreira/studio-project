@@ -1,12 +1,14 @@
 .main {
   position: relative;
+  display: grid;
+  grid-template-rows: 30% 70%;
   height: calc(100vh - 85px);
 }
 
 /* ---------- header */
 .header {
   background-color: var(--primary);
-  height: var(--big-height);
+  /* min-height: 200px; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -32,7 +34,7 @@
 
 .buttons {
   display: flex;
-  margin-top: 200px;
+  justify-content: center;
   gap: 55px;
 }
 
@@ -203,11 +205,6 @@
 }
 
 /* ------------ services */
-.service {
-  height: calc(100vh - 85px);
-  display: grid;
-  grid-template-rows: 30% 70%;
-}
 .serviceItem {
   display: flex;
   align-items: center;
@@ -236,6 +233,7 @@
 
 .serviceDescription {
   font-size: 12px;
+  min-height: 20px;
   color: rgb(34, 33, 33);
 }
 
@@ -260,10 +258,6 @@
   background: #888;
   border-radius: 15px; 
 }
-
-
-
-
 
 /* Checkbox */
 .inutCheckbox {
@@ -295,11 +289,4 @@
 
 .buttonDisabled {
   background-color: var(--secondary) !important;
-}
-
-/* ---------- responsive */
-@media (max-width: 960px) {
-  .header {
-    height: var(--height);
-  }
 }
