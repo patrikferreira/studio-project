@@ -18,7 +18,7 @@ export default function Professional({ professional }: Props) {
             }}>
                 <div className={style.professionalDiv}>
                     <div className={style.imgProfessional}>
-                        <div className={style.teste}>
+                        <div className={style.imgPerfilProfessional}>
                         <Image
                             src={ImageProfessional}
                             alt="Imagem da profissional"

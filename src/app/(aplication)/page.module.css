@@ -196,8 +196,8 @@
   position: relative;
 }
 
-.teste > img {
-  height: 100% !important;
+.imgPerfilProfessional > img {
+  height: auto !important;
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
