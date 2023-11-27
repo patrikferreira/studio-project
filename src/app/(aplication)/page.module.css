@@ -8,12 +8,16 @@
 /* ---------- header */
 .header {
   background-color: var(--primary);
-  /* min-height: 200px; */
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
+}
+
+.studioHeaderAddres p {
+  color: var(--light);
+  font-weight: lighter;
 }
 
 .imgContentStudio {
@@ -289,4 +293,48 @@
 
 .buttonDisabled {
   background-color: var(--secondary) !important;
+}
+
+
+/* ---------- addres */
+.addresComponent {
+  display: grid;
+  grid-template-rows: 10% 40% 50%;
+  height: calc(100vh - 85px);
+}
+.addresContent {
+  background-color: var(--bg-content-addres);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.headerAddres {
+  justify-content: flex-start;
+}
+
+.studioHeaderAddres {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.addresItem {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.addresIconDiv {
+  width: 40px;
+}
+
+.addresItem i {
+  font-size: 30px;
+
+  
 }

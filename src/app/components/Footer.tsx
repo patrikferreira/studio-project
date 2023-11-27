@@ -33,6 +33,12 @@ export default function Footer() {
         <i className="fa-solid fa-file-pen"></i>
         <p>SERVIÇOS</p>
       </div>
+      <div className={style.itemFooter} onClick={() => {
+        handleService('/address')
+      }}>
+        <i className="fa-solid fa-location-dot"></i>
+        <p>ENDEREÇO</p>
+      </div>
     </div>
   )
 }
