@@ -2,6 +2,7 @@
 
 :root {
   --primary: #BC85FC;
+  --secundary: #CB9FE0;
   --secondary: rgb(170, 170, 170);
   --light: #ffff;
   --progress: #F87C09;
@@ -9,6 +10,7 @@
   --black: rgb(3, 3, 3);
   --border-color: #6d65656f;
   --hover: #f0f0f0;
+  --bg-content-addres: #F2EAEA;
   --big-height: 272px;
   --height: 242px;
 }

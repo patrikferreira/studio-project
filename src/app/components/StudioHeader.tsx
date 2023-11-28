@@ -7,7 +7,7 @@ export default function StudioHeader() {
         <div className={style.imgStudioHeader}>
             <img src="assets/ficticia-perfil.png" alt="" />
         </div>
-        <p>Studio Ayla</p>
+        <p>Malima Stúdio</p>
     </div>
   )
 }
