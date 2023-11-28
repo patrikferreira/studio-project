@@ -28,6 +28,9 @@ export default function Home() {
             <Link href={'/service'}>
               <RouteButton icon={'fa-solid fa-file-pen'} description='Serviços'/>
             </Link>
+            <Link href={'/address'}>
+              <RouteButton icon={'fa-solid fa-location-dot'} description='Endereço'/>
+            </Link>
           </div>
         </div>
 

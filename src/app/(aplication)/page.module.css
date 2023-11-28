@@ -39,7 +39,9 @@
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 55px;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 450px;
 }
 
 .routeButton {
@@ -292,7 +294,50 @@
 }
 
 .buttonDisabled {
-  background-color: var(--secondary) !important;
+  background-color: var(--secondary);
+}
+
+/* ---------- addres */
+.addresComponent {
+  display: grid;
+  grid-template-rows: 10% 90%;
+  height: calc(100vh - 85px);
+}
+
+.addresInfo {
+  background-color: var(--secundary);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.headerAddres {
+  justify-content: flex-start;
+}
+
+.studioHeaderAddres {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.addresContent {
+  padding: 10px;
+}
+
+.addresItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.addresItem i {
+  font-size: 32px;
+  width: 50px;
 }
 
 
