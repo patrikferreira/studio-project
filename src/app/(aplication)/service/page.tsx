@@ -8,6 +8,7 @@ import ConfirmButton from '../../components/ConfirmButton'
 import { dataContext } from '../../store/DataContext'
 import { useRouter } from 'next/navigation'
 import ProgressStatusService from '@/app/components/ProgressStatusService'
+import Header from '@/app/components/Header'
 
 export default function page() {
   const [message, setMessage] = useState('');
@@ -55,10 +56,7 @@ export default function page() {
 
   return (
     <div className={style.main}>
-      <header className={style.header}>
-        <StudioHeader />
-        {ctx.selectedProfessional ? <ProgressStatus /> : <ProgressStatusService />}
-      </header>
+      <Header element1={<StudioHeader />} element2={ctx.selectedProfessional ? <ProgressStatus /> : <ProgressStatusService />}/>
 
       <div>
         <div className={style.serviceContent}>

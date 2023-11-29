@@ -6,23 +6,21 @@ import StudioHeader from '../../components/StudioHeader'
 import ProgressStatus from '../../components/ProgressStatus'
 import Professional from '../../components/Professional'
 import { dataContext } from '../../store/DataContext'
+import Header from '@/app/components/Header'
 
 export default function page() {
-    const router = useRouter();
-    const ctx = useContext(dataContext);
+  const router = useRouter();
+  const ctx = useContext(dataContext);
 
   return (
     <div className={style.main}>
-        <header className={style.header}>
-          <StudioHeader />
-          <ProgressStatus />
-        </header>
+      <Header element1={<StudioHeader />} element2={<ProgressStatus />} />
 
-        <div className={style.professionalContent}>
-          {ctx.professionals.map((p) => {
-            return <Professional professional={p} key={p.id}/>
-          })}
-        </div>
+      <div className={style.professionalContent}>
+        {ctx.professionals.map((p) => {
+          return <Professional professional={p} key={p.id} />
+        })}
+      </div>
     </div>
   )
 }

@@ -5,20 +5,19 @@ import RouteButton from '../components/RouteButton';
 import Image from 'next/image'
 import perfil from '../../../public/Assets/ficticia-perfil.png'
 import Link from 'next/link';
+import Header from '../components/Header';
 
 export default function Home() {
   const router = useRouter();
 
   return (
     <main className={style.main}>
-        <header className={style.header}>
-          <div className={style.imgContentStudio}>
+        <Header element1={<div className={style.imgContentStudio}>
             <Image
               src={perfil}
               alt="foto de perfil do profissional"
             />
-          </div>
-        </header>
+          </div>} element2={null}/>
 
         <div className={style.content}>
           <div className={style.buttons}>

@@ -3,18 +3,17 @@ import React, { useContext, useEffect, useState } from 'react'
 import style from '../page.module.css'
 import AddresItem from '@/app/components/AddresItem'
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import Header from '@/app/components/Header';
 
 
 export default function page() {
 
   return (
     <div className={style.addresComponent}>
-      <header className={`${style.header} ${style.headerAddres}`}>
-        <div className={style.studioHeaderAddres}>
+      <Header element1={<div className={style.studioHeaderAddres}>
           <i className="fa-solid fa-arrow-left"></i>
           <p>Malima Stúdio</p>
-        </div>
-      </header>
+        </div>} element2={null}/>
 
       <div className={style.addresContent}>
         <div className={style.addresInfo}>
