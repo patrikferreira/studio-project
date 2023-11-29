@@ -1,6 +1,5 @@
 import React from 'react'
 import style from '../(aplication)/page.module.css'
-import { Butcherman } from 'next/font/google'
 
 type Props = {
     action: () => void,
