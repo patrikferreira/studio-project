@@ -43,7 +43,9 @@
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 55px;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 450px;
 }
 
 .routeButton {
