@@ -23,9 +23,9 @@ export default function page() {
 
       <div className={style.addresContent}>
         <div className={style.addresInfo}>
-          <AddresItem icon='fa-solid fa-location-dot' desc1='Nosso Endereço' desc2='Rua Paraiso Verde, 698' desc3='Fortaleza / CE CEP 05102-010' />
-          <AddresItem icon='fa-solid fa-phone-volume' desc1='Celular/Email' desc2='(11) 98662-8884' desc3='contato@studiomalima.com.br' />
-          <AddresItem icon='fa-regular fa-clock' desc1='Horários de Funcionaento' desc2='Terça - Sexta: 10:00 - 20:00' desc3='Sábado: 09:00 - 20:00' />
+          <AddresItem icon='fa-solid fa-location-dot' desc1='Nosso Endereço' desc2='Rua Ciro Bilhar, 1092' desc3='Horizonte / CE CEP 62880-081' />
+          <AddresItem icon='fa-solid fa-phone-volume' desc1='Celular/Email' desc2='(85) 99196-9249' desc3='mlimasoares349@gmail.com' />
+          <AddresItem icon='fa-regular fa-clock' desc1='Horários de Funcionamento' desc2='Terça - Sexta: 09:00 - 18:00' desc3='Sábado: 09:00 - 17:00' />
         </div>
         <div className={style.addresMap}>
           <img src="assets/map.png" alt="" />

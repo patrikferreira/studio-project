@@ -264,10 +264,11 @@
 }
 
 /* Checkbox */
-.inutCheckbox {
+.selectButton {
   width: 17px;
   height: 17px;
 }
+
 
 .buttonWhatsappDiv {
   display: flex;

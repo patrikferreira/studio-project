@@ -2,7 +2,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import style from '../(aplication)/page.module.css'
 import ConfirmButton from './ConfirmButton'
-import Checkbox from './Checkbox'
+import SelectButton from './SelectButton'
 import { dataContext } from '../store/DataContext'
 
 type Service = {
@@ -39,7 +39,7 @@ export default function CardService({ service, selected }: Props) {
         <div className={style.serviceItem} onClick={handleServiceItemClick}>
             <div className={style.serviceTitle}>
                 {ctx.selectedProfessional &&
-                    <Checkbox checked={isChecked} />
+                    <SelectButton checked={isChecked} />
                 }
                 <div className={style.serviceInfo}>
                     <h3>{service.title}</h3>
