@@ -29,7 +29,7 @@ export default function page() {
   }
 
   function sendMessage() {
-    window.open(`https://whatsa.me/5585998473291/?t=${message}`)
+    window.open(`https://whatsa.me/5585991969249/?t=${message}`)
   }
 
   function redirectRoute() {
