@@ -104,6 +104,10 @@
   font-size: 17px;
 }
 
+.itemFooter p {
+  text-transform: uppercase;
+}
+
 /* ---------- studio header */
 .studioHeader {
   display: flex;
@@ -269,10 +273,11 @@
   border-radius: 15px; 
 }
 
-/* Checkbox */
+/* Radio */
 .inutCheckbox {
   width: 17px;
   height: 17px;
+  accent-color: var(--primary);
 }
 
 .buttonWhatsappDiv {
