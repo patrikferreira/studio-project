@@ -273,13 +273,12 @@
   border-radius: 15px; 
 }
 
-/* Radio */
-.inutCheckbox {
+/* Checkbox */
+.selectButton {
   width: 17px;
   height: 17px;
   accent-color: var(--primary);
 }
-
 .buttonWhatsappDiv {
   display: flex;
   justify-content: center;
@@ -303,50 +302,7 @@
 }
 
 .buttonDisabled {
-  background-color: var(--secondary);
-}
-
-/* ---------- addres */
-.addresComponent {
-  display: grid;
-  grid-template-rows: 10% 90%;
-  height: calc(100vh - 85px);
-}
-
-.addresInfo {
-  background-color: var(--secundary);
-  border-radius: 5px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.headerAddres {
-  justify-content: flex-start;
-}
-
-.studioHeaderAddres {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  cursor: pointer;
-  padding: 5px 0;
-}
-
-.addresContent {
-  padding: 10px;
-}
-
-.addresItem {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.addresItem i {
-  font-size: 32px;
-  width: 50px;
+  background-color: var(--secondary) !important;
 }
 
 
@@ -364,6 +320,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 40%;
 }
 
 .headerAddres {
@@ -380,6 +337,9 @@
 
 .addresContent {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .addresItem {
@@ -391,4 +351,30 @@
 .addresItem i {
   font-size: 32px;
   width: 50px;
+}
+
+.addresMap {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addresMap img {
+  height: 80%;
+}
+
+.addresMap button {
+  background-color: var(--primary);
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: var(--light);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
