@@ -6,6 +6,6 @@ type Props = {
 
 export default function Checkbox({checked}: Props) {
     return (
-        <input className={style.inutCheckbox} type="checkbox" checked={checked}/>
+        <input className={style.inutCheckbox} type="radio" checked={checked}/>
     )
 }

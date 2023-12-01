@@ -57,11 +57,7 @@ const professionalData: Professional[] = [
 ]
 
 const concatArray = professionalData[0].services.concat(professionalData[1].services)
-
-
-
 export const dataContext = createContext<contextProvider>({} as contextProvider)
-
 export default function DataProvider({children}: Props) {
     const [selectedProfessional, setSelectedProfessional] = useState<Professional | null>(null);
     const [services, setServices] = useState<Service[]>(concatArray);

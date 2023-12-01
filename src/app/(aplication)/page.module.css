@@ -104,6 +104,10 @@
   font-size: 17px;
 }
 
+.itemFooter p {
+  text-transform: uppercase;
+}
+
 /* ---------- studio header */
 .studioHeader {
   display: flex;
@@ -273,6 +277,7 @@
 .selectButton {
   width: 17px;
   height: 17px;
+  accent-color: var(--primary);
 }
 .buttonWhatsappDiv {
   display: flex;

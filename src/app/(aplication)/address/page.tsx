@@ -2,7 +2,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import style from '../page.module.css'
 import AddresItem from '@/app/components/AddresItem'
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import Header from '@/app/components/Header';
 import ConfirmButton from '@/app/components/ConfirmButton';
 

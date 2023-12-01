@@ -1,5 +1,5 @@
 "use client"
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import style from '../page.module.css'
 import StudioHeader from '../../components/StudioHeader'
 import ProgressStatus from '../../components/ProgressStatus'
@@ -15,6 +15,7 @@ export default function page() {
   const [selectedService, setSelectedService] = useState<string[]>([]);
   const ctx = useContext(dataContext);
   const router = useRouter();
+  const ref = useRef(false)
 
 
   function generateMessage() {
@@ -47,12 +48,21 @@ export default function page() {
       if (indexItem !== -1)
         newArray.splice(indexItem, 1)
       setSelectedService(newArray)
-
     }
   }
   useEffect(() => {
     generateMessage()
   }, [selectedService])
+
+  useEffect(() => {
+    return () => {
+      if(ref.current){
+        ctx.setProfessional(null)
+        return
+      }
+      ref.current = true
+    }
+  }, [])
 
   return (
     <div className={style.main}>
