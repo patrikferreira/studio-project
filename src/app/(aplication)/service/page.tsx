@@ -58,7 +58,6 @@ export default function page() {
     return () => {
       if(ref.current){
         ctx.setProfessional(null)
-        return
       }
       ref.current = true
     }
