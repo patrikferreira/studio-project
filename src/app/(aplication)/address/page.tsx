@@ -14,10 +14,12 @@ export default function page() {
   }
 
   return (
-    <div className={style.addresComponent}>
+    <main className={style.addresPage}>
       <Header element1={<div className={style.studioHeaderAddres}>
-        <i className="fa-solid fa-arrow-left"></i>
-        <p>Malima Stúdio</p>
+        <div>
+          <i className="fa-solid fa-arrow-left"></i>
+          <p>Malima Stúdio</p>
+        </div>
       </div>} element2={null} />
 
       <div className={style.addresContent}>
@@ -33,6 +35,6 @@ export default function page() {
       </div>
 
 
-    </div >
+    </main >
   )
 } 
