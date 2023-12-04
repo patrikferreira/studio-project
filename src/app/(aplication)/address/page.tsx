@@ -4,6 +4,7 @@ import style from '../page.module.css'
 import AddresItem from '@/app/components/AddresItem'
 import Header from '@/app/components/Header';
 import ConfirmButton from '@/app/components/ConfirmButton';
+import StudioHeader from '@/app/components/StudioHeader';
 
 
 export default function page() {
@@ -15,10 +16,7 @@ export default function page() {
 
   return (
     <div className={style.addresComponent}>
-      <Header element1={<div className={style.studioHeaderAddres}>
-        <i className="fa-solid fa-arrow-left"></i>
-        <p>Malima Stúdio</p>
-      </div>} element2={null} />
+      <Header element1={<StudioHeader />} element2={null}/>
 
       <div className={style.addresContent}>
         <div className={style.addresInfo}>
