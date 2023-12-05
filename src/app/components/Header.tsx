@@ -2,15 +2,13 @@ import React, { ReactNode } from 'react'
 import style from '../(aplication)/page.module.css'
 
 type Props = {
-    element1: ReactNode | null,
-    element2: ReactNode | null
+    children: ReactNode
 }
 
-export default function Header({element1, element2}: Props) {
+export default function Header({children}: Props) {
   return (
     <div className={style.header}>
-      {element1}
-      {element2}
+      {children}
     </div>
   )
 }

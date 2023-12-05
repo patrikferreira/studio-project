@@ -16,8 +16,10 @@ export default function page() {
 
   return (
     <div className={style.addresComponent}>
-      <Header element1={<StudioHeader />} element2={null}/>
-
+      <Header>
+        <StudioHeader />
+      </Header>
+      
       <div className={style.addresContent}>
         <div className={style.addresInfo}>
           <AddresItem icon='fa-solid fa-location-dot' desc1='Nosso Endereço' desc2='Rua Ciro Bilhar, 1092 - Centro' desc3='Horizonte - CE CEP 62880-081' />
