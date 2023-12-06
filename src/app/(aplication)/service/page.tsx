@@ -65,7 +65,10 @@ export default function page() {
 
   return (
     <div className={style.main}>
-      <Header element1={<StudioHeader />} element2={ctx.selectedProfessional ? <ProgressStatus /> : <ProgressStatusService />}/>
+      <Header>
+        <StudioHeader />
+        {ctx.selectedProfessional ? <ProgressStatus /> : <ProgressStatusService />}
+      </Header>
 
       <div>
         <div className={style.serviceContent}>

@@ -14,7 +14,10 @@ export default function page() {
 
   return (
     <div className={style.main}>
-      <Header element1={<StudioHeader />} element2={<ProgressStatus />} />
+      <Header>
+        <StudioHeader />
+        <ProgressStatus />
+      </Header>
 
       <div className={style.professionalContent}>
         {ctx.professionals.map((p) => {

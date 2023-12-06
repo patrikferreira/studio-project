@@ -12,26 +12,28 @@ export default function Home() {
 
   return (
     <main className={style.main}>
-        <Header element1={<div className={style.imgContentStudio}>
-            <Image
-              src={perfil}
-              alt="foto de perfil do profissional"
-            />
-          </div>} element2={null}/>
-
-        <div className={style.content}>
-          <div className={style.buttons}>
-            <Link href={'/professional'}>
-              <RouteButton icon={'fa-solid fa-calendar-days'} description='Novo Agendamento' />
-            </Link>
-            <Link href={'/service'}>
-              <RouteButton icon={'fa-solid fa-file-pen'} description='Serviços'/>
-            </Link>
-            <Link href={'/address'}>
-              <RouteButton icon={'fa-solid fa-location-dot'} description='Endereço'/>
-            </Link>
-          </div>
+      <Header>
+        <div className={style.imgContentStudio}>
+          <Image
+            src={perfil}
+            alt="foto de perfil do profissional"
+          />
         </div>
+      </Header>
+
+      <div className={style.content}>
+        <div className={style.buttons}>
+          <Link href={'/professional'}>
+            <RouteButton icon={'fa-solid fa-calendar-days'} description='Novo Agendamento' />
+          </Link>
+          <Link href={'/service'}>
+            <RouteButton icon={'fa-solid fa-file-pen'} description='Serviços' />
+          </Link>
+          <Link href={'/address'}>
+            <RouteButton icon={'fa-solid fa-location-dot'} description='Endereço' />
+          </Link>
+        </div>
+      </div>
 
     </main>
   )
