@@ -9,8 +9,10 @@ type Props = {
 export default function RouteButton({icon, description}: Props) {
   return (
     <div className={style.routeButton}>
-        <i className={`${icon} ${style.colorIcon}`}></i>
-        <p>{description}</p>
+      <div>
+          <i className={`${icon} ${style.colorIcon}`}></i>
+          <p>{description}</p>
+      </div>
     </div>
   )
 }

@@ -3,16 +3,19 @@
   display: grid;
   grid-template-rows: 30% 70%;
   height: calc(100vh - 85px);
+  background-color: rgba(243, 243, 243, 0.767);
 }
 
 /* ---------- header */
 .header {
   background-color: var(--primary);
+  height: 600px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
+
 }
 
 .studioHeaderAddres {
@@ -27,11 +30,111 @@
 .imgContentStudio {
   position: absolute;
   bottom: -50%;
+
 }
 
 .imgContentStudio img {
   height: 100%;
 }
+
+@media screen and (max-width: 900px){
+
+  .header {
+   clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 90%);
+   margin-bottom: 2.5rem;
+
+  }
+
+  .imgContentStudio {
+    position: absolute;
+    height: max-content;
+    top: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .studioTitle {
+    font-size: 10px;
+    color: #F0F0F0;
+    margin: auto;
+    text-align: center;
+    margin: 5px 0px -15px 0px;
+  }
+  
+  .studioName {
+    text-align: center;
+    margin: -55px 0 0 0;
+    font-size: 2.9rem;
+    font-family: 'Reenie Beanie', cursive;
+    color: #FAFAFA;
+  }
+
+  .studioIcons {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+ 
+  }
+
+  .imgContentStudio h2 {
+    color: #fafafa;
+    width: 60%;
+    margin: auto;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .content {
+      position:absolute;
+      bottom: 23%;
+      left: 50%;
+      transform: translateX(-50%);
+     
+    }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+
+  .routeButton {
+    background: var(--light) !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    height: max-content !important;
+    justify-content: center !important;
+    box-shadow: 2px 2px 7px 1px rgba(105, 105, 105, 0.144);
+  }
+
+  .routeButton > div  {
+    display: flex;
+    width: 40%;
+  }
+  
+  
+  .routeButton:hover {
+    filter: brightness(1.1);
+  }
+  
+  .routeButton i {
+
+    font-size: 25px;
+    margin-right: .5rem !important;
+  }
+  
+  .routeButton p {
+    color: #29084B !important;
+    font-weight: lighter;
+    font-size: 14px;
+    font-weight: 500 !important; 
+  }
+  
+ 
+}
+
 
 /* ---------- content */
 .content {

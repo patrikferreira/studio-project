@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
 :root {
-  --primary: #BC85FC;
+  --primary: #BB84FA;
   --secundary: #CB9FE0;
   --secondary: rgb(170, 170, 170);
   --light: #ffff;
