@@ -3,9 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
 :root {
-  --primary: #BB84FA;
-  --secundary: #CB9FE0;
-  --secondary: rgb(170, 170, 170);
+  --primary-color: #BC85FC;
+  --secondary-color: #29084b;
+  --content-color: #CB9FE0;
+  --disable-color: rgb(170, 170, 170);
   --light: #ffff;
   --progress: #F87C09;
   --bg-footer: #D9D9D9;
@@ -13,8 +14,8 @@
   --border-color: #6d65656f;
   --hover: #f0f0f0;
   --bg-content-addres: #F2EAEA;
-  --big-height: 272px;
-  --height: 242px;
+  --box-shadow-default: 2px 2px 5px 0px rgba(0,0,0,0.62);
+  --padding-default: 10px;
 }
 
 * {
@@ -24,3 +25,4 @@
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
 }
+

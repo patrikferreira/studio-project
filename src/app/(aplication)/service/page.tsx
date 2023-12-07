@@ -64,14 +64,14 @@ export default function page() {
   }, [])
 
   return (
-    <div className={style.main}>
+    <main className={style.servicePage}>
       <Header>
         <StudioHeader />
         {ctx.selectedProfessional ? <ProgressStatus /> : <ProgressStatusService />}
       </Header>
 
-      <div>
-        <div className={style.serviceContent}>
+      <div className={style.serviceContent}>
+        <div className={style.services}>
           {ctx.selectedProfessional &&
             ctx.selectedProfessional.services.map((s) => {
               return <CardService service={s} key={s.title} selected={selectedServiceA} />
@@ -93,6 +93,6 @@ export default function page() {
           </div>
         }
       </div>
-    </div >
+    </main >
   )
 } 

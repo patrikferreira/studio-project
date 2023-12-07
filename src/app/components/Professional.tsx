@@ -13,7 +13,7 @@ export default function Professional({ professional }: Props) {
     const ctx = useContext(dataContext);
     return (
         <Link href={'/service'}>
-            <div className={style.professional} onClick={() => {
+            <div className={style.professionalCard} onClick={() => {
                 ctx.setProfessional(professional)
             }}>
                 <div className={style.professionalDiv}>
