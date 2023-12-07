@@ -15,28 +15,29 @@ export default function Home() {
   return (
     <main className={style.homePage}>
       <Header>
-        <p className={style.studioTitle}>Espaço</p>
-        <div className={style.imgContent}>
-          <Image
-            src={perfil}
-            alt="foto de perfil do profissional"
-            width={300}
-          />
-        </div>
-        <p className={style.studioName}>Mária Lima</p>
-        <div>
-          <div className={style.studioIcons}>
-            <Image
-              src={line}
-              alt='Imagem de linha pontilhada'
-            />
+        <div className={style.headerHome}>
+          <div className={style.headerHomeDescription}>
+            <p>Mária Lima</p>
+            <div className={style.linha}>
+              <Image
+                src={line}
+                alt='Imagem de linha pontilhada'
+              />
               <Image
                 
                 src={scissor}
                 alt='imagem de tesoura'
               />
+            </div>
+            <h2>O seu Espaço de beleza e bem-estar, onde você pode ser você mesmo.</h2>
           </div>
-          <h2>O seu Espaço de beleza e bem-estar, onde você pode ser você mesmo</h2>
+          <div className={style.headerHomeImg}>
+            <Image
+                src={perfil}
+                alt="foto de perfil do profissional"
+                width={300}
+              />
+          </div>
         </div>
       </Header>
 
