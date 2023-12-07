@@ -11,7 +11,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <main className={style.main}>
+    <main className={style.homePage}>
       <Header>
         <div className={style.imgContentStudio}>
           <Image
@@ -21,8 +21,8 @@ export default function Home() {
         </div>
       </Header>
 
-      <div className={style.content}>
-        <div className={style.buttons}>
+      <div className={style.homeContent}>
+        <div className={style.homeButtonsDiv}>
           <Link href={'/professional'}>
             <RouteButton icon={'fa-solid fa-calendar-days'} description='Novo Agendamento' />
           </Link>

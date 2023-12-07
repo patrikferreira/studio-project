@@ -13,7 +13,7 @@ export default function page() {
   const ctx = useContext(dataContext);
 
   return (
-    <div className={style.main}>
+    <main className={style.professionalPage}>
       <Header>
         <StudioHeader />
         <ProgressStatus />
@@ -24,6 +24,6 @@ export default function page() {
           return <Professional professional={p} key={p.id} />
         })}
       </div>
-    </div>
+    </main>
   )
 }
