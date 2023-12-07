@@ -4,6 +4,7 @@ import style from '../page.module.css'
 import AddresItem from '@/app/components/AddresItem'
 import Header from '@/app/components/Header';
 import ConfirmButton from '@/app/components/ConfirmButton';
+import StudioHeader from '@/app/components/StudioHeader';
 
 
 export default function page() {
@@ -15,13 +16,9 @@ export default function page() {
 
   return (
     <main className={style.addresPage}>
-      <Header element1={<div className={style.studioHeaderAddres}>
-        <div>
-          <i className="fa-solid fa-arrow-left"></i>
-          <p>Malima Stúdio</p>
-        </div>
-      </div>} element2={null} />
-
+      <Header>
+        <StudioHeader />
+      </Header>
       <div className={style.addresContent}>
         <div className={style.addresInfo}>
           <AddresItem icon='fa-solid fa-location-dot' desc1='Nosso Endereço' desc2='Rua Ciro Bilhar, 1092 - Centro' desc3='Horizonte - CE CEP 62880-081' />

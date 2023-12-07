@@ -289,9 +289,16 @@
   align-items: center;
   width: 100%;
   padding: 0 10px;
-  gap: 10px;
   position: absolute;
   top: 10px;
+}
+
+.divReturn {
+  display: flex;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
 
 .studioHeader .imgStudioHeader {

@@ -12,26 +12,28 @@ export default function Home() {
 
   return (
     <main className={style.homePage}>
-        <Header element1={<div className={style.homeTitle}><p>Malima Stúdio</p></div>} element2={<div className={style.imgContentStudio}>
-            <Image
-              src={perfil}
-              alt="foto de perfil do profissional"
-            />
-          </div>}/>
-
-        <div className={style.homeContent}>
-          <div className={style.homeButtonsDiv}>
-            <Link href={'/professional'}>
-              <RouteButton icon={'fa-solid fa-calendar-days'} description='Novo Agendamento' />
-            </Link>
-            <Link href={'/service'}>
-              <RouteButton icon={'fa-solid fa-file-pen'} description='Serviços'/>
-            </Link>
-            <Link href={'/address'}>
-              <RouteButton icon={'fa-solid fa-location-dot'} description='Endereço'/>
-            </Link>
-          </div>
+      <Header>
+        <div className={style.imgContentStudio}>
+          <Image
+            src={perfil}
+            alt="foto de perfil do profissional"
+          />
         </div>
+      </Header>
+
+      <div className={style.homeContent}>
+        <div className={style.homeButtonsDiv}>
+          <Link href={'/professional'}>
+            <RouteButton icon={'fa-solid fa-calendar-days'} description='Novo Agendamento' />
+          </Link>
+          <Link href={'/service'}>
+            <RouteButton icon={'fa-solid fa-file-pen'} description='Serviços' />
+          </Link>
+          <Link href={'/address'}>
+            <RouteButton icon={'fa-solid fa-location-dot'} description='Endereço' />
+          </Link>
+        </div>
+      </div>
 
     </main>
   )
