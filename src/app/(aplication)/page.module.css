@@ -324,6 +324,7 @@
   display: grid;
   grid-template-rows: 10% 90%;
   height: calc(100vh - 60px);
+  background-color: var(--secondary-color);
 }
 
 .studioHeaderAddres {
@@ -350,7 +351,7 @@
 }
 
 .addresInfo {
-  background-color: var(--content-color);
+  background-color: var(--light);
   border-radius: 5px;
   padding: 20px;
   display: flex;
@@ -391,11 +392,19 @@
   gap: 10px;
 }
 
+.addresButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 80px;
+}
+
 .addresMap > img {
   height: 80%;
 }
 
-.addresMap > button {
+.addresButton > button {
   background-color: var(--primary-color);
   border: none;
   padding: 10px 25px;
@@ -406,9 +415,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  -webkit-box-shadow: var(--box-shadow-default);
-  -moz-box-shadow: var(--box-shadow-default);
-  box-shadow: var(--box-shadow-default);
 }
 
 /* ----------------------------- components style */
