@@ -20,9 +20,11 @@ export default function page() {
       </Header>
 
       <div className={style.professionalContent}>
-        {ctx.professionals.map((p) => {
-          return <Professional professional={p} key={p.id} />
-        })}
+        <div className={style.cardContent}>
+          {ctx.professionals.map((p) => {
+            return <Professional professional={p} key={p.id} />
+          })}
+        </div>
       </div>
     </main>
   )

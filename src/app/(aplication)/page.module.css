@@ -144,14 +144,38 @@
   background-color: var(--secondary-color);
 }
 
-.professionalCard {
-  border-bottom: 1px solid var(--border-color);
+.professionalContent {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.cardContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  overflow: auto;
+}
+
+.professionalCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
   align-items: center;
   padding: 10px 25px;
   cursor: pointer;
   transition: .3s;
+  background-color: var(--light);
+  border-radius: 10px;
+  height: 300px;
+  width: 300px;
+}
+
+.professionalCard i {
+  filter: drop-shadow(5px 2px 2px #cca5f8);
+  font-size: 25px;
 }
 
 .imgContentStudio {
@@ -159,20 +183,17 @@
   bottom: -50%;
 }
 
-.professionalCard:hover {
-  background-color: var(--hover);
-}
-
 .professionalDiv {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
 .professionalCard .imgProfessional {
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -190,24 +211,43 @@
 .servicePage {
   display: grid;
   grid-template-rows: 30% 70%;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 60px);
   background-color: var(--secondary-color);
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
 }
 
 .serviceItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-color);
   padding: 5px 15px;
   cursor: pointer;
   transition: .3s;
+  background-color: var(--light);
+  border-radius: 10px;
+  width: 95%;
 }
 
 .serviceInfo {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.serviceInfo > h3 {
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+.serviceInfo > .checkedTitle {
+  color: var(--primary-color);
 }
 
 .serviceItem:hover {
@@ -262,6 +302,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: absolute;
+  bottom: 80px;
 }
 
 .buttonWhatsappDiv > button {
@@ -271,13 +313,10 @@
   cursor: pointer;
   border-radius: 3px;
   color: var(--light);
-  font-size: 15px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
-  -webkit-box-shadow: var(--box-shadow-default);
-  -moz-box-shadow: var(--box-shadow-default);
-  box-shadow: var(--box-shadow-default);
 }
 
 /* ----------------------------- addres */
@@ -428,6 +467,23 @@
   transform: translate(-50%, -50%);
 }
 
+/* checkbox */
+.inutCheckbox{
+  all: unset;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: var(--disable-color);
+  border-radius: 50%;
+}
+.inutCheckbox:checked{
+  background-color: var(--primary-color);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+
 /* progres status */
 .progressStatus {
   display: flex;
@@ -459,7 +515,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--black);
+  color: var(--light);
 }
 
 .orangeColor {

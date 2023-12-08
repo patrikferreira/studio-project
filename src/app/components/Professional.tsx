@@ -22,7 +22,7 @@ export default function Professional({ professional }: Props) {
                         <Image
                             src={ImageProfessional}
                             alt="Imagem da profissional"
-                            width={85}
+                            width={150}
                         />
                         </div>
                     </div>

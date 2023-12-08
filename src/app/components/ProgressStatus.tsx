@@ -8,7 +8,7 @@ export default function ProgressStatus() {
   return (
     <div className={style.progressStatus}>
       <div className={style.divStatusProfessional}>
-        <div className={style.divColor} style={{background: '#F87C09'}}>
+        <div className={style.divColor} style={{background: '#f39033'}}>
           1
         </div>
         <p>Selecione um Profissional</p>
