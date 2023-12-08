@@ -8,6 +8,7 @@ import line from '../../../public/Assets/Line1.png'
 import scissor from '../../../public/Assets/pngwing3.png'
 import Link from 'next/link';
 import Header from '../components/Header';
+import NameStudio from '../components/NameStudio';
 
 export default function Home() {
   const router = useRouter();
@@ -17,7 +18,7 @@ export default function Home() {
       <Header>
         <div className={style.headerHome}>
           <div className={style.headerHomeDescription}>
-            <p>Mária Lima</p>
+            <NameStudio />
             <div className={style.linha}>
               <Image
                 src={line}

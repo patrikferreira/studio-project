@@ -28,7 +28,7 @@ export default function Professional({ professional }: Props) {
                     </div>
                     <p>{professional.name}</p>
                 </div>
-                <div className={style.icon}>
+                <div className={style.colorIcon}>
                     <i className="fa-solid fa-play"></i>
                 </div>
             </div>
