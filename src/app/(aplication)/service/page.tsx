@@ -67,7 +67,7 @@ export default function page() {
     <main className={style.servicePage}>
       <Header>
         <StudioHeader />
-        {ctx.selectedProfessional ? <ProgressStatus /> : <ProgressStatusService />}
+        {ctx.selectedProfessional ? <ProgressStatus service={selectedService.length > 0 ? true : false} /> : <ProgressStatusService />}
       </Header>
 
       <div className={style.serviceContent}>

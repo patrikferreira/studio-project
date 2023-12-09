@@ -1,26 +1,39 @@
-import React, { useContext } from 'react';
+"use client"
+import React, { useContext, useState } from 'react';
 import style from '../(aplication)/page.module.css'
 import { dataContext } from '../store/DataContext';
 
-export default function ProgressStatus() {
+type Props = {
+  service: boolean | null
+}
 
-  const ctx = useContext(dataContext)
+export default function ProgressStatus({service}: Props) {
+  const ctx = useContext(dataContext);
+  const progressWidth = ctx.selectedProfessional
+    ? service
+      ? '100%'
+      : '50%'
+    : '0%';
+
+  const progressStyle = {
+    width: progressWidth,
+    background: '#552191'
+  };
+
+  
   return (
     <div className={style.progressStatus}>
-      <div className={style.divStatusProfessional}>
-        <div className={style.divColor} style={{background: '#f39033'}}>
-          1
+      <div className={style.progressBar}>
+        <div className={style.progress} style={{width: progressStyle.width}}></div>
+        <div className={style.check} style={{background: progressStyle.background}}>
+          ✓
         </div>
-        <p>Selecione um Profissional</p>
-      </div>
-
-      <span className={`${style.bar} ${ctx.selectedProfessional ? style.orangeColor : ''}`}></span>
-
-      <div className={style.divStatusService}>
-        <div className={`${style.divColor} ${ctx.selectedProfessional ? style.orangeColor : ''}`}>
-          2
+        <div className={style.check} style={ctx.selectedProfessional ? {background: progressStyle.background} : {}}>
+          ✓
         </div>
-        <p>Selecione um Serviço</p>
+        <div className={style.check} style={service ? {background: progressStyle.background} : {}}>
+          ✓
+        </div>
       </div>
     </div>
   );
