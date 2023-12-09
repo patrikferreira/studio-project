@@ -1,20 +1,118 @@
 /* ----------------------------- home */
 .homePage {
   display: grid;
-  grid-template-rows: 30% 70%;
+  grid-template-rows: 45% 55%;
   height: calc(100vh - 60px);
+  background-color: var(--secondary-color);
 }
 
-.homeTitle > p {
-  font-size: 35px;
-  font-family: 'Italiana', sans-serif;
-  color: var(--light)
+.homePage > .header {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
-.homeContent {
+.headerHome {
+  display: flex;
+  width: 100%;
+  padding: 0 10%;
+  justify-content: space-between;
+}
+
+.headerHomeImg {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.headerHomeImg > img {
+  height: 300px;
+  width: 334px;
+}
+
+.headerHomeDescription {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.headerHomeDescription > p {
+  color: var(--light);
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 45px;
+}
+
+.headerHomeDescription > h2 {
+  color: var(--light);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.studioHeaderAddres {
+  width: 100%;
+}
+
+.studioHeaderAddres p {
+  color: var(--light);
+  font-weight: lighter;
+}
+
+.imgContentStudio img {
+  height: 100%;
+}
+
+.homeButtonsDiv {
+  flex-direction: column;
+  gap: 10px !important;
+}
+
+
+@media screen and (max-width: 900px){
+
+  .header {
+   clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 90%);
+   margin-bottom: 2.5rem;
+   flex-direction: column !important;
+
+  }
+
+  .imgContentStudio {
+    position: absolute;
+    height: max-content;
+    top: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .studioTitle {
+    font-size: 10px;
+    color: #F0F0F0;
+    margin: auto;
+    text-align: center;
+    margin: 5px 0px -15px 0px;
+  }
+  
+
+  .studioIcons {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+ 
+  }
+
+  .imgContentStudio h2 {
+    color: #fafafa;
+    width: 60%;
+    margin: auto;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+
+/* ---------- content */
+.homeContent {
+  padding: 5% 10%;
 }
 
 .homeButtonsDiv {
@@ -35,7 +133,7 @@
 }
 
 .colorIcon {
-  color: var(--secondary-color)
+  color: var(--primary-color)
 }
 
 /* ----------------------------- professional */
@@ -43,16 +141,46 @@
   display: grid;
   grid-template-rows: 30% 70%;
   height: calc(100vh - 60px);
+  background-color: var(--secondary-color);
+}
+
+.professionalContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.cardContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  overflow: auto;
 }
 
 .professionalCard {
-  border-bottom: 1px solid var(--border-color);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
   align-items: center;
   padding: 10px 25px;
   cursor: pointer;
   transition: .3s;
+  background-color: var(--light);
+  border-radius: var(--radius);
+  height: 300px;
+  width: 300px;
+}
+
+.professionalCard i {
+  filter: drop-shadow(5px 2px 2px #cca5f8);
+  font-size: 25px;
+  transition: .3s;
+}
+
+.professionalCard:hover i {
+  filter: brightness(1.1);
 }
 
 .imgContentStudio {
@@ -60,20 +188,17 @@
   bottom: -50%;
 }
 
-.professionalCard:hover {
-  background-color: var(--hover);
-}
-
 .professionalDiv {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
 .professionalCard .imgProfessional {
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -92,22 +217,42 @@
   display: grid;
   grid-template-rows: 30% 70%;
   height: calc(100vh - 60px);
+  background-color: var(--secondary-color);
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
 }
 
 .serviceItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-color);
   padding: 5px 15px;
   cursor: pointer;
   transition: .3s;
+  background-color: var(--light);
+  border-radius: var(--radius);
+  width: 95%;
 }
 
 .serviceInfo {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.serviceInfo > h3 {
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+.serviceInfo > .checkedTitle {
+  color: var(--primary-color);
 }
 
 .serviceItem:hover {
@@ -144,7 +289,7 @@
 
 .serviceContent::-webkit-scrollbar-thumb{
   background: #888;
-  border-radius: 15px; 
+  border-radius: var(--radius); 
 }
 
 .selectButton {
@@ -162,6 +307,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: absolute;
+  bottom: 80px;
 }
 
 .buttonWhatsappDiv > button {
@@ -169,15 +316,17 @@
   border: none;
   padding: 10px 25px;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: var(--radius);
   color: var(--light);
-  font-size: 15px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
-  -webkit-box-shadow: var(--box-shadow-default);
-  -moz-box-shadow: var(--box-shadow-default);
-  box-shadow: var(--box-shadow-default);
+  transition: .3s;
+}
+
+.buttonWhatsappDiv > button:hover {
+  filter: brightness(1.1);
 }
 
 /* ----------------------------- addres */
@@ -185,6 +334,7 @@
   display: grid;
   grid-template-rows: 10% 90%;
   height: calc(100vh - 60px);
+  background-color: var(--secondary-color);
 }
 
 .studioHeaderAddres {
@@ -211,13 +361,12 @@
 }
 
 .addresInfo {
-  background-color: var(--content-color);
-  border-radius: 5px;
+  background-color: var(--light);
+  border-radius: var(--radius);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  
+  gap: 10px; 
 }
 
 .headerAddres {
@@ -252,24 +401,41 @@
   gap: 10px;
 }
 
-.addresMap > img {
-  height: 80%;
+.addresButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 80px;
 }
 
-.addresMap > button {
+.addresMap {
+  overflow: hidden;
+  /* border: 1px solid black; */
+  /* height: 40%; */
+}
+
+.addresMap > img {
+  height: 90%;
+  transition: .3s;
+}
+
+.addresButton > button {
   background-color: var(--primary-color);
   border: none;
   padding: 10px 25px;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: var(--radius);
   color: var(--light);
   font-size: 15px;
   display: flex;
   align-items: center;
   gap: 10px;
-  -webkit-box-shadow: var(--box-shadow-default);
-  -moz-box-shadow: var(--box-shadow-default);
-  box-shadow: var(--box-shadow-default);
+  transition: .3s;
+}
+
+.addresButton > button:hover {
+  filter: brightness(1.1);
 }
 
 /* ----------------------------- components style */
@@ -291,6 +457,12 @@
   padding: 0 10px;
   position: absolute;
   top: 10px;
+}
+
+.nameStudio {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 30px;
+  color: var(--light);
 }
 
 .divReturn {
@@ -321,6 +493,23 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* checkbox */
+.inutCheckbox{
+  all: unset;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: var(--disable-color);
+  border-radius: 50%;
+}
+.inutCheckbox:checked{
+  background-color: var(--primary-color);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
 
 /* progres status */
 .progressStatus {
@@ -353,7 +542,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--black);
+  color: var(--light);
 }
 
 .orangeColor {
@@ -362,51 +551,57 @@
 
 /* routebuttons */
 .routeButton {
-  height: 100px;
-  width: 150px;
   padding: var(--pedding-default);
-  border-radius: 7px;
-  background-color: var(--primary-color);
+  border-radius: var(--radius);
+  background-color: var(--light);
   display: flex;
-  flex-direction: column;
   gap: 5px;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  padding: 10px 20px;
   cursor: pointer;
   transition: .3s;
-  -webkit-box-shadow: var(--box-shadow-default);
-  -moz-box-shadow: var(--box-shadow-default);
-  box-shadow: var(--box-shadow-default);
 }
 
 .routeButton:hover {
   filter: brightness(1.1);
 }
 
-.routeButton > i {
+.routeButton i {
   font-size: 25px;
+  margin-right: .5rem !important;
 }
 
-.routeButton > p {
-  color: var(--light);
+.routeButton p {
+  color: var(--primary-color);
   font-weight: lighter;
-  font-size: 14px;
+  font-size: 24px; 
+  font-weight: 500 !important;
 }
+
+.routeButton:hover {
+  filter: brightness(1.1);
+}
+
 
 /* footer */
 .footer {
   width: 100%;
-  background-color: var(--bg-footer);
   padding: var(--pedding-default);
+  background-color: var(--secondary-color);
   display: flex;
-  align-items: center;
-  height: 60px;
-  gap: 5%;
   justify-content: center;
-  box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.41);
-  -webkit-box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.41);
-  -moz-box-shadow: 0px -2px 3px 0px rgba(0,0,0,0.41);
+  height: 60px;
+}
+
+.footerFloating {
+  display: flex;
+  height: 60px;
+  gap: 10%;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  padding: 5px 30px;
+  border-radius: var(--radius);
 }
 
 .footer .itemFooter {
@@ -419,7 +614,12 @@
 }
 
 .itemFooter > i {
-  font-size: 17px;
+  font-size: 22px;
+  transition: .3s;
+}
+
+.itemFooter:hover i {
+  color: var(--primary-color)
 }
 
 .itemFooter > p {

@@ -52,8 +52,8 @@ const professionalData: Professional[] = [
             {title: 'Maquiagem e Cabelo', description: '', price: 'R$ 100,00'}, // adicionar descricao
             {title: 'Consultoria de imagem e estilo', description: 'Quaisquer tipos de cabelos com curvaturas ou não.', price: 'R$ 300,00'},
         ]
-    }
-   
+    },
+    
 ]
 
 const concatArray = professionalData[0].services.concat(professionalData[1].services)

@@ -42,7 +42,7 @@ export default function CardService({ service, selected }: Props) {
                     <Checkbox checked={isChecked} />
                 }
                 <div className={style.serviceInfo}>
-                    <h3>{service.title}</h3>
+                    <h3 className={isChecked ? style.checkedTitle : ''}>{service.title}</h3>
                     <p className={style.serviceDescription}>{service.description}</p>
                     <p>{searchProfessional(service)}</p>
                 </div>

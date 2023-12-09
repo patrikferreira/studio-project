@@ -12,18 +12,20 @@ export default function Footer() {
 
   return (
     <div className={style.footer}>
-      {
-        footer.ITENS_FOOTER.map((item, i) => {
-          return (
-            <div key={i} className={style.itemFooter} onClick={() => {
-              redirectRoute(item.routePath)
-            }}>
-              <i className={item.classNameIcon}></i>
-              <p>{item.titleItem}</p>
-            </div>
-          )
-        })
-      }
+      <div className={style.footerFloating}>
+        {
+          footer.ITENS_FOOTER.map((item, i) => {
+            return (
+              <div key={i} className={style.itemFooter} onClick={() => {
+                redirectRoute(item.routePath)
+              }}>
+                <i className={item.classNameIcon}></i>
+                {/* <p>{item.titleItem}</p> */}
+              </div>
+            )
+          })
+        }
+      </div>
     </div>
   )
 }

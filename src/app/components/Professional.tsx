@@ -22,13 +22,13 @@ export default function Professional({ professional }: Props) {
                         <Image
                             src={ImageProfessional}
                             alt="Imagem da profissional"
-                            width={85}
+                            width={150}
                         />
                         </div>
                     </div>
                     <p>{professional.name}</p>
                 </div>
-                <div className={style.icon}>
+                <div className={style.colorIcon}>
                     <i className="fa-solid fa-play"></i>
                 </div>
             </div>

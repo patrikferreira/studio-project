@@ -27,7 +27,9 @@ export default function page() {
         </div>
         <div className={style.addresMap}>
           <img src="assets/map.png" alt="" />
-          <ConfirmButton disabled={false} action={redirectMap} title='Como chegar' icon='' />
+          <div className={style.addresButton}>
+            <ConfirmButton disabled={false} action={redirectMap} title='Como chegar' icon='' />
+          </div>
         </div>
       </div>
 
