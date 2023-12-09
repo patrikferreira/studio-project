@@ -168,7 +168,7 @@
   cursor: pointer;
   transition: .3s;
   background-color: var(--light);
-  border-radius: 10px;
+  border-radius: var(--radius);
   height: 300px;
   width: 300px;
 }
@@ -176,6 +176,11 @@
 .professionalCard i {
   filter: drop-shadow(5px 2px 2px #cca5f8);
   font-size: 25px;
+  transition: .3s;
+}
+
+.professionalCard:hover i {
+  filter: brightness(1.1);
 }
 
 .imgContentStudio {
@@ -231,7 +236,7 @@
   cursor: pointer;
   transition: .3s;
   background-color: var(--light);
-  border-radius: 10px;
+  border-radius: var(--radius);
   width: 95%;
 }
 
@@ -284,7 +289,7 @@
 
 .serviceContent::-webkit-scrollbar-thumb{
   background: #888;
-  border-radius: 15px; 
+  border-radius: var(--radius); 
 }
 
 .selectButton {
@@ -311,12 +316,17 @@
   border: none;
   padding: 10px 25px;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: var(--radius);
   color: var(--light);
   font-size: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: .3s;
+}
+
+.buttonWhatsappDiv > button:hover {
+  filter: brightness(1.1);
 }
 
 /* ----------------------------- addres */
@@ -352,12 +362,11 @@
 
 .addresInfo {
   background-color: var(--light);
-  border-radius: 5px;
+  border-radius: var(--radius);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  
+  gap: 10px; 
 }
 
 .headerAddres {
@@ -400,8 +409,15 @@
   bottom: 80px;
 }
 
+.addresMap {
+  overflow: hidden;
+  /* border: 1px solid black; */
+  /* height: 40%; */
+}
+
 .addresMap > img {
-  height: 80%;
+  height: 90%;
+  transition: .3s;
 }
 
 .addresButton > button {
@@ -409,12 +425,17 @@
   border: none;
   padding: 10px 25px;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: var(--radius);
   color: var(--light);
   font-size: 15px;
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: .3s;
+}
+
+.addresButton > button:hover {
+  filter: brightness(1.1);
 }
 
 /* ----------------------------- components style */
@@ -531,7 +552,7 @@
 /* routebuttons */
 .routeButton {
   padding: var(--pedding-default);
-  border-radius: 7px;
+  border-radius: var(--radius);
   background-color: var(--light);
   display: flex;
   gap: 5px;
@@ -578,10 +599,9 @@
   gap: 10%;
   justify-content: center;
   align-items: center;
-  /* background-color: var(--light); */
   width: 500px;
   padding: 5px 30px;
-  border-radius: 15px;
+  border-radius: var(--radius);
 }
 
 .footer .itemFooter {
