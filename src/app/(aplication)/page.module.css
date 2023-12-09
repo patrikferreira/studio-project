@@ -176,11 +176,6 @@
 .professionalCard i {
   filter: drop-shadow(5px 2px 2px #cca5f8);
   font-size: 25px;
-  transition: .3s;
-}
-
-.professionalCard:hover i {
-  filter: brightness(1.1);
 }
 
 .imgContentStudio {
@@ -453,8 +448,9 @@
 .studioHeader {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 25px;
   position: absolute;
   top: 10px;
 }
@@ -469,8 +465,37 @@
   display: flex;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 5px;
   cursor: pointer;
+  background-color: var(--light);
+  height: 30px;
+  width: 75px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: .3s;
+  color: var(--primary-color);
+}
+
+.changeStyle {
+  width: 30px;
+}
+
+.changeStyleSpan {
+  display: none;
+}
+
+.divReturn > i {
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+
+.divStudio {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 5px;
 }
 
 .studioHeader .imgStudioHeader {
