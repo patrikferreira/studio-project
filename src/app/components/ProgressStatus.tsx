@@ -4,7 +4,7 @@ import style from '../(aplication)/page.module.css'
 import { dataContext } from '../store/DataContext';
 
 type Props = {
-  service: boolean | null
+  service?: boolean
 }
 
 export default function ProgressStatus({service}: Props) {

@@ -16,7 +16,7 @@ export default function page() {
     <main className={style.professionalPage}>
       <Header>
         <StudioHeader />
-        <ProgressStatus service={null}/>
+        <ProgressStatus />
       </Header>
 
       <div className={style.professionalContent}>

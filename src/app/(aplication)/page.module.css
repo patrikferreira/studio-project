@@ -563,7 +563,7 @@
   background-color: var(--progress);
   z-index: 1;
   border-radius: 25px;
-  transition: width 0.5s ease-in-out
+  transition: width 0.5s ease-in-out;
 }
 
 .check {
@@ -576,62 +576,12 @@
   align-items: center;
   color: var(--light);
   z-index: 2;
+  transition: width 0.5s ease-in-out;
 }
 
 .checkActive {
   background-color: var(--progress);
 }
-
-/* .progressBar {
-  display: flex;
-  gap: 2px;
-  background-color: #ffffff69;
-  width: 300px;
-  height: 25px;
-  border-radius: 25px;
-  overflow: hidden;
-}
-
-.progress {
-  height: 100%;
-  background-color: #fff;
-  border-radius: 25px;
-  width: 50%;
-} */
-
-
-
-/* .divStatusProfessional, .divStatusService {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  width: 120px;
-  color: var(--light);
-  text-align: center;
-}
-
-.bar {
-  height: 2px;
-  width: 100px;
-  background-color: var(--light);
-  margin-top: 23px;
-}
-
-.divColor {
-  background-color: var(--light);
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--light);
-}
-
-.orangeColor {
-  background-color: var(--progress);
-} */
 
 /* routebuttons */
 .routeButton {
