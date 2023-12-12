@@ -7,7 +7,6 @@ import CardService from '../../components/CardService'
 import ConfirmButton from '../../components/ConfirmButton'
 import { dataContext } from '../../store/DataContext'
 import { useRouter } from 'next/navigation'
-import ProgressStatusService from '@/app/components/ProgressStatusService'
 import Header from '@/app/components/Header'
 
 export default function page() {
@@ -67,7 +66,7 @@ export default function page() {
     <main className={style.servicePage}>
       <Header>
         <StudioHeader />
-        {ctx.selectedProfessional ? <ProgressStatus /> : <ProgressStatusService />}
+        <ProgressStatus service={selectedService.length > 0 ? true : false} />
       </Header>
 
       <div className={style.serviceContent}>

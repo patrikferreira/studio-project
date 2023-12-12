@@ -7,7 +7,7 @@
   --secondary-color: rgba(243, 243, 243, 0.767);
   --disable-color: rgb(170, 170, 170);
   --light: #ffff;
-  --progress: #f39033;
+  --progress: #552191;
   --bg-footer: #D9D9D9;
   --black: rgb(3, 3, 3);
   --border-color: #6d65656f;
@@ -15,7 +15,7 @@
   --hover: #e4e4e4;
   --bg-content-addres: #F2EAEA;
   --box-shadow-default: 2px 2px 5px 0px rgba(0,0,0,0.62);
-  --radius: 10px;
+  --radius: 7px;
   --padding-default: 10px;
   --padding-side: 0 25px;
 }

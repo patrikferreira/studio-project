@@ -113,6 +113,7 @@
 /* ---------- content */
 .homeContent {
   padding: 5% 10%;
+  position: relative;
 }
 
 .homeButtonsDiv {
@@ -148,7 +149,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: var(--padding-default);
 }
 
 .cardContent {
@@ -220,19 +221,19 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 10px;
+  padding: var(--padding-default);
 }
 
 .serviceItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 15px;
+  padding: var(--padding-default);
   cursor: pointer;
   transition: .3s;
   background-color: var(--light);
   border-radius: var(--radius);
-  width: 95%;
+  width: 100%;
 }
 
 .serviceInfo {
@@ -309,7 +310,11 @@
 .buttonWhatsappDiv > button {
   background-color: var(--primary-color);
   border: none;
-  padding: 10px 25px;
+  height: 40px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   border-radius: var(--radius);
   color: var(--light);
@@ -336,7 +341,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0 10px;
+  padding: var(--padding-default);
 }
 
 .studioHeaderAddres > div {
@@ -418,7 +423,11 @@
 .addresButton > button {
   background-color: var(--primary-color);
   border: none;
-  padding: 10px 25px;
+  height: 40px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   border-radius: var(--radius);
   color: var(--light);
@@ -539,38 +548,47 @@
 /* progres status */
 .progressStatus {
   display: flex;
-  justify-content: center;
-}
-
-.divStatusProfessional, .divStatusService {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 5px;
-  width: 120px;
-  color: var(--light);
-  text-align: center;
-}
-
-.bar {
-  height: 2px;
-  width: 100px;
-  background-color: var(--light);
-  margin-top: 23px;
-}
-
-.divColor {
-  background-color: var(--light);
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  display: flex;
   justify-content: center;
   align-items: center;
   color: var(--light);
 }
 
-.orangeColor {
+.progressBar {
+  background-color: #FFF;
+  width: 300px;
+  height: 10px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.progress {
+  position: absolute;
+  height: 100%;
+  background-color: var(--progress);
+  z-index: 1;
+  border-radius: 25px;
+  transition: width 0.5s ease-in-out;
+}
+
+.check {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+  z-index: 2;
+  transition: width 0.5s ease-in-out;
+}
+
+.checkActive {
   background-color: var(--progress);
 }
 
