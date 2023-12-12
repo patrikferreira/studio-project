@@ -5,6 +5,8 @@ import AddresItem from '@/app/components/AddresItem'
 import Header from '@/app/components/Header';
 import ConfirmButton from '@/app/components/ConfirmButton';
 import StudioHeader from '@/app/components/StudioHeader';
+import map from '../../../../public/Assets/map.png'
+import Image from 'next/image';
 
 
 export default function page() {
@@ -26,7 +28,10 @@ export default function page() {
           <AddresItem icon='fa-regular fa-clock' desc1='Horários de Funcionaento' desc2='Terça - Sexta: 09:00 - 18:00' desc3='Sábado: 09:00 - 17:00' />
         </div>
         <div className={style.addresMap}>
-          <img src="assets/map.png" alt="" />
+          <Image
+                src={map}
+                alt="foto do mapa"
+              />
           <div className={style.addresButton}>
             <ConfirmButton disabled={false} action={redirectMap} title='Como chegar' icon='' />
           </div>
