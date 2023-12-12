@@ -37,7 +37,7 @@
 .headerHomeDescription > p {
   color: var(--light);
   font-family: 'Reenie Beanie', cursive;
-  font-size: 45px;
+  font-size: 55px;
 }
 
 .headerHomeDescription > h2 {
@@ -63,52 +63,6 @@
   flex-direction: column;
   gap: 10px !important;
 }
-
-
-@media screen and (max-width: 900px){
-
-  .header {
-   clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 90%);
-   margin-bottom: 2.5rem;
-   flex-direction: column !important;
-
-  }
-
-  .imgContentStudio {
-    position: absolute;
-    height: max-content;
-    top: 0; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-  .studioTitle {
-    font-size: 10px;
-    color: #F0F0F0;
-    margin: auto;
-    text-align: center;
-    margin: 5px 0px -15px 0px;
-  }
-  
-
-  .studioIcons {
-    display: flex;  
-    align-items: center;
-    justify-content: center;
- 
-  }
-
-  .imgContentStudio h2 {
-    color: #fafafa;
-    width: 60%;
-    margin: auto;
-    font-weight: 700;
-    text-align: center;
-  }
-}
-
 
 /* ---------- content */
 .homeContent {
@@ -230,6 +184,7 @@
   justify-content: space-between;
   padding: var(--padding-default);
   cursor: pointer;
+  gap: 3px;
   transition: .3s;
   background-color: var(--light);
   border-radius: var(--radius);
@@ -667,4 +622,106 @@
 
 .itemFooter > p {
   text-transform: uppercase;
+}
+
+/* ----------------------------- responsive layout */
+.headerHomeImg > img,
+.imgContentStudio > img,
+.professionalCard .imgProfessional > img,
+.addresMap > img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 900px){
+  /* homepage */
+  .homePage {
+    display: grid;
+    grid-template-rows: 55% 45%;
+    height: calc(100vh - 60px);
+  }
+
+  .homePage > .header {
+    clip-path: none;
+  }
+
+  .headerHomeDescription {
+    width: 100%;
+    padding: var(--padding-default);
+    margin-top: -50px;
+  }
+
+  .headerHome {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headerHomeDescription > p {
+    font-size: 45px;
+  }
+
+  .headerHomeDescription > h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .homeContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .routeButton i {
+    font-size: 22px;
+  }
+
+  .routeButton p {
+    font-size: 20px;
+  }
+
+  /* professional */
+  .professionalCard {
+    height: 260px;
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    overflow: auto;
+  }
+
+  .professionalCard {
+    height: 260px;
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .headerHomeDescription > p {
+    font-size: 40px;
+  }
+
+  .headerHomeDescription > h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .homeButtonsDiv {
+    width: 90%;
+  }
+
+  .routeButton i {
+    font-size: 20px;
+  }
+
+  .routeButton p {
+    font-size: 16px;
+  }
 }
