@@ -197,6 +197,7 @@
 
 .serviceInfo > h3 {
   color: var(--title-color);
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -683,6 +684,14 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
+  }
+
+  .serviceTitle {
+    font-size: 0.9rem;
+  }
+
+  .serviceInfo > h3 {
+    font-size: 0.9rem;
   }
 
   /* footer */
