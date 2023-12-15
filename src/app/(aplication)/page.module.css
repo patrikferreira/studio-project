@@ -93,18 +93,20 @@
   grid-template-rows: 30% 70%;
   height: calc(100vh - 50px);
   background-color: var(--secondary-color);
+  overflow: auto;
 }
 
 .professionalContent {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   padding: var(--padding-default);
 }
 
 .cardContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   overflow: auto;
 }
@@ -425,7 +427,6 @@
   width: 100%;
   padding: 0 25px;
   position: absolute;
-  border: 1px solid black;
   top: 10px;
 }
 
@@ -520,7 +521,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  border: 1px solid black;
+  margin-top: 50px;
 }
 
 .progress {
@@ -633,6 +634,15 @@
     width: 100%;
   }
 
+  /* professional */
+  .professionalCard {
+    height: 250px;
+    width: 250px;
+  }
+
+  .cardContent {
+    gap: 20px;
+  }
   
 }
 
@@ -658,6 +668,21 @@
   
   .routeButton p {
     font-size: 1.1rem; 
+  }
+
+  /* professional */
+  .progressBar {
+    width: 250px;
+  }
+  .professionalCard {
+    height: 200px;
+    width: 200px;
+  }
+
+  .cardContent {
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
   }
 
   /* footer */
