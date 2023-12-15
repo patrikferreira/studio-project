@@ -1,20 +1,26 @@
 /* ----------------------------- home */
 .homePage {
   display: grid;
-  grid-template-rows: 45% 55%;
-  height: calc(100vh - 60px);
+  grid-template-rows: 50% 50%;
+  height: calc(100vh - 50px);
   background-color: var(--secondary-color);
-}
-
-.homePage > .header {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .headerHome {
   display: flex;
   width: 100%;
-  padding: 0 10%;
+  padding: 5px 10%;
   justify-content: space-between;
+}
+
+.homePage .studioName {
+  font-size: 4rem;
+}
+
+.headerHomeDescription > .homePageDescription {
+  color: var(--light);
+  font-size: 2rem;
+  font-weight: lighter;
 }
 
 .headerHomeImg {
@@ -24,44 +30,14 @@
 }
 
 .headerHomeImg > img {
-  height: 300px;
-  width: 334px;
+  display: block;
+  width: max-content;
 }
 
 .headerHomeDescription {
   display: flex;
   flex-direction: column;
   max-width: 500px;
-}
-
-.headerHomeDescription > p {
-  color: var(--light);
-  font-family: 'Reenie Beanie', cursive;
-  font-size: 55px;
-}
-
-.headerHomeDescription > h2 {
-  color: var(--light);
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.studioHeaderAddres {
-  width: 100%;
-}
-
-.studioHeaderAddres p {
-  color: var(--light);
-  font-weight: lighter;
-}
-
-.imgContentStudio img {
-  height: 100%;
-}
-
-.homeButtonsDiv {
-  flex-direction: column;
-  gap: 10px !important;
 }
 
 /* ---------- content */
@@ -73,29 +49,49 @@
 .homeButtonsDiv {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 10px;
   width: 450px;
-}
-
-.imgContentStudio {
-  position: absolute;
-  bottom: -50%;
-}
-
-.imgContentStudio > img {
-  height: 100%;
 }
 
 .colorIcon {
   color: var(--primary-color)
 }
 
+.routeButton {
+  padding: var(--pedding-default);
+  border-radius: var(--radius);
+  background-color: var(--light);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.routeButton:hover {
+  background-color: var(--hover);
+}
+
+.routeButton i {
+  font-size: 1.2rem;
+  margin-right: .5rem !important;
+}
+
+.routeButton p {
+  color: var(--primary-color);
+  font-weight: lighter;
+  font-size: 1.2rem; 
+  font-weight: 500 !important;
+}
+
 /* ----------------------------- professional */
 .professionalPage {
   display: grid;
   grid-template-rows: 30% 70%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   background-color: var(--secondary-color);
 }
 
@@ -166,7 +162,7 @@
 .servicePage {
   display: grid;
   grid-template-rows: 30% 70%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   background-color: var(--secondary-color);
 }
 
@@ -288,9 +284,22 @@
 .addresPage {
   display: grid;
   grid-template-rows: 10% 90%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   background-color: var(--secondary-color);
 }
+
+/* .studioHeaderAddres {
+  width: 100%;
+}
+
+.studioHeaderAddres p {
+  color: var(--light);
+  font-weight: lighter;
+} */
+
+/* .imgContentStudio img {
+  height: 100%;
+} */
 
 .studioHeaderAddres {
   display: flex;
@@ -416,13 +425,14 @@
   width: 100%;
   padding: 0 25px;
   position: absolute;
+  border: 1px solid black;
   top: 10px;
 }
 
-.nameStudio {
+.studioName {
   font-family: 'Reenie Beanie', cursive;
-  font-size: 30px;
   color: var(--light);
+  font-size: 2rem;
 }
 
 .divReturn {
@@ -501,17 +511,8 @@
 
 
 /* progres status */
-.progressStatus {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-  color: var(--light);
-}
-
 .progressBar {
-  background-color: #FFF;
+  background-color: var(--light);
   width: 300px;
   height: 10px;
   border-radius: 25px;
@@ -519,6 +520,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  border: 1px solid black;
 }
 
 .progress {
@@ -547,53 +549,20 @@
   background-color: var(--progress);
 }
 
-/* routebuttons */
-.routeButton {
-  padding: var(--pedding-default);
-  border-radius: var(--radius);
-  background-color: var(--light);
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.routeButton:hover {
-  filter: brightness(1.1);
-}
-
-.routeButton i {
-  font-size: 25px;
-  margin-right: .5rem !important;
-}
-
-.routeButton p {
-  color: var(--primary-color);
-  font-weight: lighter;
-  font-size: 24px; 
-  font-weight: 500 !important;
-}
-
-.routeButton:hover {
-  filter: brightness(1.1);
-}
-
-
-/* footer */
+/* ----------------------------- footer */
 .footer {
   width: 100%;
   padding: var(--pedding-default);
   background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
-  height: 60px;
+  align-items: center;
+  height: 50px;
 }
 
 .footerFloating {
   display: flex;
-  height: 60px;
+  height: 40px;
   gap: 10%;
   justify-content: center;
   align-items: center;
@@ -612,7 +581,7 @@
 }
 
 .itemFooter > i {
-  font-size: 22px;
+  font-size: 1.4rem;
   transition: .3s;
 }
 
@@ -625,30 +594,12 @@
 }
 
 /* ----------------------------- responsive layout */
-.headerHomeImg > img,
-.imgContentStudio > img,
-.professionalCard .imgProfessional > img,
-.addresMap > img {
-  max-width: 100%;
-  height: auto;
-}
-
 @media screen and (max-width: 900px){
   /* homepage */
   .homePage {
     display: grid;
-    grid-template-rows: 55% 45%;
-    height: calc(100vh - 60px);
-  }
-
-  .homePage > .header {
-    clip-path: none;
-  }
-
-  .headerHomeDescription {
-    width: 100%;
-    padding: var(--padding-default);
-    margin-top: -50px;
+    grid-template-rows: 60% 40%;
+    height: calc(100vh - 50px);
   }
 
   .headerHome {
@@ -656,72 +607,62 @@
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
+    padding: 5px 10px;
   }
 
-  .headerHomeDescription > p {
-    font-size: 45px;
+  .headerHomeImg > img {
+    display: block;
+    width: max-content;
+    height: 200px;
   }
 
-  .headerHomeDescription > h2 {
-    font-size: 20px;
-    font-weight: 700;
+  .homePage .studioName {
+    font-size: 3rem;
   }
 
-  .homeContent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .routeButton i {
-    font-size: 22px;
-  }
-
-  .routeButton p {
-    font-size: 20px;
-  }
-
-  /* professional */
-  .professionalCard {
-    height: 260px;
-    width: 260px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .cardContent {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    overflow: auto;
-  }
-
-  .professionalCard {
-    height: 260px;
-    width: 260px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  .headerHomeDescription > p {
-    font-size: 40px;
-  }
-
-  .headerHomeDescription > h2 {
-    font-size: 18px;
-    font-weight: 700;
+  .headerHomeDescription > .homePageDescription {
+    font-size: 1.4rem;
   }
 
   .homeButtonsDiv {
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  
+}
+
+@media screen and (max-width: 600px) {
+  /* home */
+  .headerHomeImg > img {
+    display: block;
+    width: max-content;
+    height: 180px;
+  }
+
+  .homePage .studioName {
+    font-size: 2.7rem;
+  }
+
+  .headerHomeDescription > .homePageDescription {
+    font-size: 1.2rem;
   }
 
   .routeButton i {
-    font-size: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .routeButton p {
+    font-size: 1.1rem; 
   }
 
-  .routeButton p {
-    font-size: 16px;
+  /* footer */
+  .itemFooter > i {
+    font-size: 1.2rem;
+    transition: .3s;
   }
 }
