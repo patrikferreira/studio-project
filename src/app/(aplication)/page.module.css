@@ -286,23 +286,19 @@
 /* ----------------------------- addres */
 .addresPage {
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 12% 88%;
   height: calc(100vh - 50px);
   background-color: var(--secondary-color);
 }
 
-/* .studioHeaderAddres {
+.studioHeaderAddres {
   width: 100%;
 }
 
 .studioHeaderAddres p {
   color: var(--light);
   font-weight: lighter;
-} */
-
-/* .imgContentStudio img {
-  height: 100%;
-} */
+}
 
 .studioHeaderAddres {
   display: flex;
@@ -319,6 +315,7 @@
 }
 
 .studioHeaderAddres > p {
+  font-size: 1rem;
   color: var(--light);
   font-weight: lighter;
 }
@@ -328,23 +325,18 @@
 }
 
 .addresInfo {
-  background-color: var(--light);
-  border-radius: var(--radius);
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px; 
-}
-
-.headerAddres {
-  justify-content: flex-start;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
 .addresContent {
-  padding: 10px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
 }
 
@@ -355,7 +347,7 @@
 }
 
 .addresItem > i {
-  font-size: 32px;
+  font-size: 2rem;
   width: 50px;
 }
 
@@ -366,38 +358,39 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  width: 50%;
+  height: 100%;
+  padding: 10px;
 }
 
 .addresButton {
   width: 100%;
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: 80px;
 }
 
-.addresMap {
-  overflow: hidden;
-  /* border: 1px solid black; */
-  /* height: 40%; */
+.addresMapImg {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-.addresMap > img {
-  height: 90%;
-  transition: .3s;
+.addresMapImg img {
+  max-width: 100%;
+  height: auto;
 }
 
 .addresButton > button {
   background-color: var(--primary-color);
   border: none;
   height: 40px;
-  width: 150px;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: var(--radius);
   color: var(--light);
+  border-radius: var(--radius);
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -643,6 +636,22 @@
 
   .cardContent {
     gap: 20px;
+  }
+
+  /* addres */
+  .addresContent {
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+
+  .addresInfo {
+    height: 88vh;
+    width: 100%;
+  }
+
+  .addresMap {
+    height: 88vh;
+    width: 100%;
   }
   
 }
