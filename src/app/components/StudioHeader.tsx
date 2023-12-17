@@ -1,6 +1,6 @@
+"use client"
 import React, { useEffect, useState } from 'react'
 import style from '../(aplication)/page.module.css'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import NameStudio from './NameStudio';
 

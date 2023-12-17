@@ -1,5 +1,3 @@
-"use client"
-import { useRouter } from 'next/navigation'
 import style from './page.module.css'
 import RouteButton from '../components/RouteButton';
 import Image from 'next/image'
@@ -11,7 +9,6 @@ import Header from '../components/Header';
 import NameStudio from '../components/NameStudio';
 
 export default function Home() {
-  const router = useRouter();
 
   return (
     <main className={style.homePage}>
