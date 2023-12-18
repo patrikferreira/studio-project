@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import style from '../(aplication)/page.module.css'
 import { useRouter } from 'next/navigation'
-import NameStudio from './NameStudio';
+import ImageProfessional from '../../../public/Assets/ficticia-perfil.png'
 import StudioName from './StudioName';
+import Image from 'next/image';
 
 export default function StudioHeader() {
   const router = useRouter();
@@ -17,7 +18,7 @@ export default function StudioHeader() {
     setTimeout(() => {
       setChangeStyles(true)
     }, 5000);
-    
+
   }, [])
 
   return (
@@ -26,10 +27,14 @@ export default function StudioHeader() {
         <i className="fa-solid fa-chevron-left"></i>
         <span className={`${changeStyles && style.changeStyleSpan}`}>Voltar</span>
       </div>
-      
+
       <div className={style.divStudio}>
         <div className={style.imgStudioHeader}>
-          <img src="assets/ficticia-perfil.png" alt="" />
+          <Image
+            src={ImageProfessional}
+            alt="Imagem da profissional"
+            width={60}
+          />
         </div>
         <StudioName />
       </div>
