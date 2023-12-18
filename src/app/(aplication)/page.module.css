@@ -639,6 +639,7 @@
   .homePage {
     display: grid;
     grid-template-rows: 65% 35%;
+    height: calc(100vh - 50px);
   }
 
   .headerHome, .homeContent {
