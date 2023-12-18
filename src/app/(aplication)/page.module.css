@@ -1,19 +1,15 @@
 /* ----------------------------- home */
 .homePage {
   display: grid;
-  grid-template-rows: 45% 55%;
-  height: calc(100vh - 60px);
+  grid-template-rows: 50% 50%;
+  height: calc(100vh - 50px);
   background-color: var(--secondary-color);
-}
-
-.homePage > .header {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .headerHome {
   display: flex;
   width: 100%;
-  padding: 0 10%;
+  padding: 10%;
   justify-content: space-between;
 }
 
@@ -25,7 +21,7 @@
 
 .headerHomeImg > img {
   height: 300px;
-  width: 334px;
+  width: auto;
 }
 
 .headerHomeDescription {
@@ -34,29 +30,16 @@
   max-width: 500px;
 }
 
-.headerHomeDescription > p {
+.headerHomeDescription>p {
   color: var(--light);
   font-family: 'Reenie Beanie', cursive;
-  font-size: 55px;
+  font-size: 4rem;
 }
 
-.headerHomeDescription > h2 {
+.headerHomeDescription>h2 {
   color: var(--light);
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.studioHeaderAddres {
-  width: 100%;
-}
-
-.studioHeaderAddres p {
-  color: var(--light);
-  font-weight: lighter;
-}
-
-.imgContentStudio img {
-  height: 100%;
+  font-size: 2rem;
+  font-weight: lighter
 }
 
 .homeButtonsDiv {
@@ -78,17 +61,37 @@
   width: 450px;
 }
 
-.imgContentStudio {
-  position: absolute;
-  bottom: -50%;
-}
-
-.imgContentStudio > img {
-  height: 100%;
-}
-
 .colorIcon {
   color: var(--primary-color)
+}
+
+/* routebuttons */
+.routeButton {
+  padding: var(--pedding);
+  border-radius: var(--radius);
+  background-color: var(--light);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.routeButton i {
+  font-size: 1.3rem;
+  margin-right: .5rem !important;
+}
+
+.routeButton p {
+  color: var(--primary-color);
+  font-weight: lighter;
+  font-size: 1.3rem;
+  font-weight: 500 !important;
+}
+
+.routeButton:hover {
+  background-color: var(--hover);
 }
 
 /* ----------------------------- professional */
@@ -154,7 +157,7 @@
   position: relative;
 }
 
-.imgPerfilProfessional > img {
+.imgPerfilProfessional>img {
   height: auto !important;
   position: absolute !important;
   top: 50% !important;
@@ -197,12 +200,12 @@
   flex-wrap: wrap;
 }
 
-.serviceInfo > h3 {
+.serviceInfo>h3 {
   color: var(--title-color);
   font-weight: 500;
 }
 
-.serviceInfo > .checkedTitle {
+.serviceInfo>.checkedTitle {
   color: var(--primary-color);
 }
 
@@ -238,9 +241,9 @@
   background-color: rgb(175, 175, 175);
 }
 
-.serviceContent::-webkit-scrollbar-thumb{
+.serviceContent::-webkit-scrollbar-thumb {
   background: #888;
-  border-radius: var(--radius); 
+  border-radius: var(--radius);
 }
 
 .selectButton {
@@ -262,7 +265,7 @@
   bottom: 80px;
 }
 
-.buttonWhatsappDiv > button {
+.buttonWhatsappDiv>button {
   background-color: var(--primary-color);
   border: none;
   height: 40px;
@@ -280,7 +283,7 @@
   transition: .3s;
 }
 
-.buttonWhatsappDiv > button:hover {
+.buttonWhatsappDiv>button:hover {
   filter: brightness(1.1);
 }
 
@@ -292,6 +295,15 @@
   background-color: var(--secondary-color);
 }
 
+/* .studioHeaderAddres {
+  width: 100%;
+}
+
+.studioHeaderAddres p {
+  color: var(--light);
+  font-weight: lighter;
+} */
+
 .studioHeaderAddres {
   display: flex;
   align-items: center;
@@ -299,19 +311,19 @@
   padding: var(--padding-default);
 }
 
-.studioHeaderAddres > div {
+.studioHeaderAddres>div {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
 }
 
-.studioHeaderAddres > p {
+.studioHeaderAddres>p {
   color: var(--light);
   font-weight: lighter;
 }
 
-.imgContentStudio > img {
+.imgContentStudio>img {
   height: 100%;
 }
 
@@ -321,7 +333,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .headerAddres {
@@ -342,7 +354,7 @@
   gap: 20px;
 }
 
-.addresItem > i {
+.addresItem>i {
   font-size: 32px;
   width: 50px;
 }
@@ -370,12 +382,12 @@
   /* height: 40%; */
 }
 
-.addresMap > img {
+.addresMap>img {
   height: 90%;
   transition: .3s;
 }
 
-.addresButton > button {
+.addresButton>button {
   background-color: var(--primary-color);
   border: none;
   height: 40px;
@@ -393,7 +405,7 @@
   transition: .3s;
 }
 
-.addresButton > button:hover {
+.addresButton>button:hover {
   filter: brightness(1.1);
 }
 
@@ -419,11 +431,6 @@
   top: 10px;
 }
 
-.nameStudio {
-  font-family: 'Reenie Beanie', cursive;
-  font-size: 30px;
-  color: var(--light);
-}
 
 .divReturn {
   display: flex;
@@ -449,7 +456,7 @@
   display: none;
 }
 
-.divReturn > i {
+.divReturn>i {
   font-size: 16px;
   color: var(--primary-color);
 }
@@ -470,12 +477,12 @@
   position: relative;
 }
 
-.studioHeader > p {
+.studioHeader>p {
   color: var(--light);
   font-weight: lighter;
 }
 
-.imgStudioHeader > img {
+.imgStudioHeader>img {
   height: 100%;
   position: absolute;
   top: 50%;
@@ -484,7 +491,7 @@
 }
 
 /* checkbox */
-.inutCheckbox{
+.inutCheckbox {
   all: unset;
   width: 15px;
   height: 15px;
@@ -492,7 +499,8 @@
   background-color: var(--disable-color);
   border-radius: 50%;
 }
-.inutCheckbox:checked{
+
+.inutCheckbox:checked {
   background-color: var(--primary-color);
   width: 15px;
   height: 15px;
@@ -547,39 +555,6 @@
   background-color: var(--progress);
 }
 
-/* routebuttons */
-.routeButton {
-  padding: var(--pedding-default);
-  border-radius: var(--radius);
-  background-color: var(--light);
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.routeButton:hover {
-  filter: brightness(1.1);
-}
-
-.routeButton i {
-  font-size: 25px;
-  margin-right: .5rem !important;
-}
-
-.routeButton p {
-  color: var(--primary-color);
-  font-weight: lighter;
-  font-size: 24px; 
-  font-weight: 500 !important;
-}
-
-.routeButton:hover {
-  filter: brightness(1.1);
-}
-
 
 /* footer */
 .footer {
@@ -588,12 +563,12 @@
   background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
-  height: 60px;
+  height: 50px;
 }
 
 .footerFloating {
   display: flex;
-  height: 60px;
+  height: 50px;
   gap: 10%;
   justify-content: center;
   align-items: center;
@@ -608,11 +583,10 @@
   gap: 3px;
   text-align: center;
   cursor: pointer;
-  font-size: 12px;
 }
 
-.itemFooter > i {
-  font-size: 22px;
+.itemFooter>i {
+  font-size: 1.3rem;
   transition: .3s;
 }
 
@@ -620,108 +594,86 @@
   color: var(--primary-color)
 }
 
-.itemFooter > p {
-  text-transform: uppercase;
-}
-
 /* ----------------------------- responsive layout */
-.headerHomeImg > img,
-.imgContentStudio > img,
-.professionalCard .imgProfessional > img,
-.addresMap > img {
-  max-width: 100%;
-  height: auto;
-}
+@media screen and (max-width: 900px) {
 
-@media screen and (max-width: 900px){
   /* homepage */
-  .homePage {
-    display: grid;
-    grid-template-rows: 55% 45%;
-    height: calc(100vh - 60px);
+  .headerHome, .homeContent {
+    padding: 5%;
   }
 
-  .homePage > .header {
-    clip-path: none;
-  }
-
+  .headerHomeImg > img {
+    width: auto;
+    height: 260px;
+ }
+  
   .headerHomeDescription {
-    width: 100%;
-    padding: var(--padding-default);
-    margin-top: -50px;
+    max-width: 400px;
   }
 
-  .headerHome {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
+  .headerHomeDescription>p {
+    font-size: 3rem;
   }
 
-  .headerHomeDescription > p {
-    font-size: 45px;
-  }
-
-  .headerHomeDescription > h2 {
-    font-size: 20px;
-    font-weight: 700;
-  }
-
-  .homeContent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  .headerHomeDescription>h2 {
+    font-size: 1.4rem;
   }
 
   .routeButton i {
-    font-size: 22px;
+    font-size: 1.2rem;
   }
 
   .routeButton p {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
 
-  /* professional */
-  .professionalCard {
-    height: 260px;
-    width: 260px;
+  /* footer */
+  .itemFooter > i {
+    font-size: 1.2rem;
   }
+
 }
 
 @media screen and (max-width: 600px) {
-  .cardContent {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    overflow: auto;
+  /* homepage */
+  .homePage {
+    display: grid;
+    grid-template-rows: 65% 35%;
   }
 
-  .professionalCard {
-    height: 260px;
-    width: 260px;
+  .headerHome, .homeContent {
+    padding: 2%;
   }
-}
 
-@media screen and (max-width: 460px) {
-  .headerHomeDescription > p {
-    font-size: 40px;
+  .headerHome {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .headerHomeImg > img {
+     width: auto;
+     height: 230px;
   }
 
   .headerHomeDescription > h2 {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  .headerHomeDescription {
+    text-align: center;
+    max-width: 100% !important;
   }
 
   .homeButtonsDiv {
-    width: 90%;
+    width: 100%;
   }
 
   .routeButton i {
-    font-size: 20px;
+    font-size: 1.1rem;
   }
 
   .routeButton p {
-    font-size: 16px;
+    font-size: 1.1rem;
   }
 }
