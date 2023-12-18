@@ -98,7 +98,7 @@
 .professionalPage {
   display: grid;
   grid-template-rows: 30% 70%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   background-color: var(--secondary-color);
 }
 
@@ -110,10 +110,14 @@
 }
 
 .cardContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  display: flex;
+  padding: 10px 10% !important;
+  gap: 2%;
   overflow: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .professionalCard {
@@ -146,23 +150,26 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .professionalCard .imgProfessional {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.imgPerfilProfessional {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  overflow: hidden;
-  position: relative;
 }
 
 .imgPerfilProfessional>img {
-  height: auto !important;
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
+  height: 100%;
 }
 
 /* ----------------------------- service */
@@ -477,9 +484,11 @@
   position: relative;
 }
 
-.studioHeader>p {
+.studioName {
   color: var(--light);
   font-weight: lighter;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 2rem;
 }
 
 .imgStudioHeader>img {
@@ -527,6 +536,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin-top: 15%;
 }
 
 .progress {
@@ -626,6 +636,17 @@
     font-size: 1.2rem;
   }
 
+  /* professional */
+  .professionalCard {
+    height: 280px;
+    width: 280px;
+  }
+
+  /* progress status */
+  .progressBar {
+    width: 270px;
+  }
+
   /* footer */
   .itemFooter > i {
     font-size: 1.2rem;
@@ -638,7 +659,7 @@
   .homePage {
     display: grid;
     grid-template-rows: 65% 35%;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 50px) !important;
   }
 
   .headerHome, .homeContent {
@@ -676,4 +697,23 @@
   .routeButton p {
     font-size: 1.1rem;
   }
+
+  /* professional */
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .professionalCard {
+    height: 200px;
+    width: 200px;
+  }
+
+  /* progress status */
+  .progressBar {
+    width: 250px;
+  }
+  
 }

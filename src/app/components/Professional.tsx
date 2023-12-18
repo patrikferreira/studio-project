@@ -19,17 +19,17 @@ export default function Professional({ professional }: Props) {
                 <div className={style.professionalDiv}>
                     <div className={style.imgProfessional}>
                         <div className={style.imgPerfilProfessional}>
-                        <Image
-                            src={ImageProfessional}
-                            alt="Imagem da profissional"
-                            width={150}
-                        />
+                            <Image
+                                src={ImageProfessional}
+                                alt="Imagem da profissional"
+                                width={150}
+                            />
                         </div>
+                        <p>{professional.name}</p>
                     </div>
-                    <p>{professional.name}</p>
-                </div>
-                <div className={style.colorIcon}>
-                    <i className="fa-solid fa-play"></i>
+                    <div className={style.colorIcon}>
+                        <i className="fa-solid fa-play"></i>
+                    </div>
                 </div>
             </div>
         </Link>

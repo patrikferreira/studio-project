@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import style from '../(aplication)/page.module.css'
 import { useRouter } from 'next/navigation'
 import NameStudio from './NameStudio';
+import StudioName from './StudioName';
 
 export default function StudioHeader() {
   const router = useRouter();
@@ -30,7 +31,7 @@ export default function StudioHeader() {
         <div className={style.imgStudioHeader}>
           <img src="assets/ficticia-perfil.png" alt="" />
         </div>
-        <NameStudio />
+        <StudioName />
       </div>
     </div>
   )
