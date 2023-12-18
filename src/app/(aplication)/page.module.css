@@ -596,7 +596,6 @@
 
 /* ----------------------------- responsive layout */
 @media screen and (max-width: 900px) {
-
   /* homepage */
   .headerHome, .homeContent {
     padding: 5%;
@@ -643,7 +642,7 @@
   }
 
   .headerHome, .homeContent {
-    padding: 2%;
+    padding: 3%;
   }
 
   .headerHome {
