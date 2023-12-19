@@ -306,101 +306,49 @@
 /* ----------------------------- addres */
 .addresPage {
   display: grid;
-  grid-template-rows: 10% 90%;
-  height: calc(100vh - 60px);
+  grid-template-rows: 12% 88%;
+  height: calc(100vh - 50px);
   background-color: var(--secondary-color);
 }
 
-/* .studioHeaderAddres {
-  width: 100%;
-}
-
-.studioHeaderAddres p {
-  color: var(--light);
-  font-weight: lighter;
-} */
-
-.studioHeaderAddres {
+.addresContent {
+  padding: 2%;
   display: flex;
-  align-items: center;
-  width: 100%;
-  padding: var(--padding-default);
-}
-
-.studioHeaderAddres>div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.studioHeaderAddres>p {
-  color: var(--light);
-  font-weight: lighter;
-}
-
-.imgContentStudio>img {
-  height: 100%;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 20px;
+  align-items: stretch;
+  overflow: auto;
 }
 
 .addresInfo {
-  background-color: var(--light);
-  border-radius: var(--radius);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.headerAddres {
-  justify-content: flex-start;
-}
-
-.addresContent {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex: 1; 
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.addresMap {
+  flex: 1; 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addresMap > img {
+  max-width: 100%; 
+  height: auto;   
+  width: auto\9; 
+  min-width: 300px;
 }
 
 .addresItem {
   display: flex;
   align-items: center;
   gap: 20px;
-}
-
-.addresItem>i {
-  font-size: 32px;
-  width: 50px;
-}
-
-.addresMap {
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.addresButton {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 80px;
-}
-
-.addresMap {
-  overflow: hidden;
-  /* border: 1px solid black; */
-  /* height: 40%; */
-}
-
-.addresMap>img {
-  height: 90%;
-  transition: .3s;
 }
 
 .addresButton>button {
@@ -423,6 +371,10 @@
 
 .addresButton>button:hover {
   filter: brightness(1.1);
+}
+
+.colorIcon {
+  font-size: 2rem;
 }
 
 /* ----------------------------- components style */
@@ -643,6 +595,15 @@
     width: 280px;
   }
 
+  /* addres */
+  .addresContent {
+    gap: 10px;
+  }
+
+  .colorIcon {
+    font-size: 1.7rem;
+  }
+
   /* progress status */
   .progressBar {
     width: 270px;
@@ -724,7 +685,30 @@
   .price {
     font-size: 0.9rem;
   }
+
+  /* addres */
+  .addresContent {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .addresInfo {
+    height: 40%;
+    gap: 5px;
+  }
+
+  .colorIcon {
+    font-size: 1.5rem;
+  }
+
+  .addresItemDescription > p {
+    font-size: 0.9rem;
+  }
   
+  .addresMap {
+    height: 60%;
+  }
+
   /* progress status */
   .progressBar {
     width: 250px;
