@@ -712,6 +712,19 @@
     width: 200px;
   }
 
+  /* service page */
+  .serviceInfo > h3 {
+    font-size: 0.9rem;
+  }
+
+  .serviceTitle {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 0.9rem;
+  }
+  
   /* progress status */
   .progressBar {
     width: 250px;

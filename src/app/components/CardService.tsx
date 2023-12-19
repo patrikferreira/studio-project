@@ -47,7 +47,7 @@ export default function CardService({ service, selected }: Props) {
                     <p>{searchProfessional(service)}</p>
                 </div>
             </div>
-            <p>{service.price}</p>
+            <p className={style.price}>{service.price}</p>
         </div>
   
 )}
