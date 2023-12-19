@@ -20,7 +20,6 @@ export default function Footer() {
                 redirectRoute(item.routePath)
               }}>
                 <i className={item.classNameIcon}></i>
-                {/* <p>{item.titleItem}</p> */}
               </div>
             )
           })
