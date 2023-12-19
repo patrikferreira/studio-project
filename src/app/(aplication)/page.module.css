@@ -180,7 +180,7 @@
 .servicePage {
   display: grid;
   grid-template-rows: 30% 70%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   background-color: var(--secondary-color);
 }
 
@@ -190,6 +190,8 @@
   align-items: center;
   gap: 8px;
   padding: var(--padding-default);
+  padding: 10px 5%;
+
 }
 
 .serviceItem {
@@ -203,6 +205,7 @@
   background-color: var(--light);
   border-radius: var(--radius);
   width: 100%;
+  padding: 5px 10px;
 }
 
 .serviceInfo {
@@ -211,9 +214,10 @@
   flex-wrap: wrap;
 }
 
-.serviceInfo>h3 {
+.serviceInfo > h3 {
   color: var(--title-color);
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .serviceInfo>.checkedTitle {
@@ -231,7 +235,7 @@
 }
 
 .serviceDescription {
-  font-size: 12px;
+  font-size: 0.9rem;
   min-height: 20px;
   color: rgb(34, 33, 33);
 }
@@ -244,17 +248,18 @@
   overflow-x: hidden;
 }
 
-.serviceContent::-webkit-scrollbar {
-  width: 11px;
+.services::-webkit-scrollbar {
+  width: 14px;
 }
 
-.serviceContent::-webkit-scrollbar-track {
-  background-color: rgb(175, 175, 175);
+.services::-webkit-scrollbar-track {
+  background-color: var(--secondary-color);
 }
 
-.serviceContent::-webkit-scrollbar-thumb {
-  background: #888;
+.services::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
   border-radius: var(--radius);
+  margin: 2px;
 }
 
 .selectButton {
@@ -498,9 +503,9 @@
 /* checkbox */
 .inutCheckbox {
   all: unset;
-  width: 15px;
-  height: 15px;
-  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  display: block;
   background-color: var(--disable-color);
   border-radius: 50%;
 }
