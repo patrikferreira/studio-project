@@ -60,7 +60,7 @@ export default function ServicePageList() {
             }
             ref.current = true
         }
-    }, [router])
+    }, [])
     return (
         <div className={style.servicePage}>
             <Header>
