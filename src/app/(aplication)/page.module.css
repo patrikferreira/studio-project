@@ -216,7 +216,7 @@
 
 .serviceInfo > h3 {
   color: var(--title-color);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
 }
 
@@ -674,6 +674,7 @@
   /* service page */
   .serviceInfo > h3 {
     font-size: 0.9rem;
+
   }
 
   .serviceTitle {
