@@ -18,9 +18,10 @@ export default function ServicePageList() {
 
 
     function generateMessage() {
+        const formattedServices = selectedService.join(', ')
         const formatedMessage = selectedService.length > 1 ? 'os seguintes serviços' : 'o serviço'
         if (ctx.selectedProfessional && selectedService.length > 0) {
-            setMessage(`Olá! Gostaria de agendar ${formatedMessage}: ${selectedService}, com o(a) ${ctx.selectedProfessional.name}. Estou interessado(a) em marcar uma data. Como podemos prosseguir?`)
+            setMessage(`Olá! Gostaria de agendar ${formatedMessage}: ${formattedServices}, com o(a) ${ctx.selectedProfessional.name}. Estou interessado(a) em marcar uma data. Como podemos prosseguir?`)
         }
     }
 
