@@ -9,7 +9,7 @@ export default function CardContent() {
     return (
         <div className={style.cardContent}>
             {ctx.professionals.map((p) => {
-                return <Professional professional={p} key={p.id} />
+                return <Professional professional={p} img={p.importImg} key={p.id} />
             })}
         </div>
     )

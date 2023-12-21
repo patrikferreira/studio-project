@@ -4,7 +4,7 @@ import { ReactNode, createContext, useState } from "react"
 export type Professional = {
     id: string,
     name: string,
-    img: string,
+    importImg: string,
     services: Service[]
 }
 
@@ -32,7 +32,7 @@ const professionalData: Professional[] = [
     {
         id: "maria",
         name: 'Mária Lima',
-        img: 'assets/ficticia-perfil.png',
+        importImg: '/Assets/ficticia-perfil.png',
         services: [
             {title: 'Corte com lavagem e finalização', description: '', price: 'R$ 60,00'},
             {title: 'Corte com hidratação', description: 'Inclui finalização com escova ou cabelos com curvaturas', price: 'R$ 90,00'},
@@ -46,7 +46,7 @@ const professionalData: Professional[] = [
     {
         id: "joyce",
         name: 'Joyce Holanda',
-        img: 'assets/ficticia-perfil.png',
+        importImg: '/Assets/joyce-holanda.png',
         services: [
             {title: 'Maquiagem', description: 'Inclui maquiagem social e maquiagem de festa', price: 'R$ 75,00'},
             {title: 'Maquiagem e Cabelo', description: '', price: 'R$ 100,00'}, // adicionar descricao

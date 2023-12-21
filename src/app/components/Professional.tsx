@@ -3,14 +3,15 @@ import style from '../(aplication)/page.module.css'
 import { Professional, dataContext } from '../store/DataContext'
 import Link from 'next/link'
 import Image from 'next/image'
-import ImageProfessional from '../../../public/Assets/ficticia-perfil.png'
 
 type Props = {
-    professional: Professional
+    professional: Professional,
+    img: string
 }
 
-export default function Professional({ professional }: Props) {
+export default function Professional({ professional, img }: Props) {
     const ctx = useContext(dataContext);
+
     return (
         <Link href={'/service'}>
             <div className={style.professionalCard} onClick={() => {
@@ -20,9 +21,10 @@ export default function Professional({ professional }: Props) {
                     <div className={style.imgProfessional}>
                         <div className={style.imgPerfilProfessional}>
                             <Image
-                                src={ImageProfessional}
+                                src={img}
                                 alt="Imagem da profissional"
                                 width={150}
+                                height={150}
                             />
                         </div>
                         <p>{professional.name}</p>
