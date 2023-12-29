@@ -35,6 +35,7 @@ const professionalData: Professional[] = [
         importImg: '/Assets/ficticia-perfil.png',
         services: [
             {title: 'Corte com lavagem e finalização', description: '', price: 'R$ 60,00'},
+            {title: 'Retoque de corte', description: 'Retoque de corte com até 3 meses de crescimento', price: 'R$ 50,00'},
             {title: 'Corte com hidratação', description: 'Inclui finalização com escova ou cabelos com curvaturas', price: 'R$ 90,00'},
             {title: 'Tratamento capilar', description: 'Quaisquer tipos de cabelos com curvaturas ou não.', price: 'R$ 50,00'},
             {title: 'Botox', description: 'O valor pode variar de acordo com o comprimento e quantidade do cabelo.', price: 'R$ 70,00'},
